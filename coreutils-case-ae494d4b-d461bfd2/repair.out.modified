@@ -1,0 +1,3148 @@
+Initialize the program!
+Generating repair candidates!
+Processing src/tail.c
+In dir /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src
+BUILDDIR:
+BUILDCMD:/home/ubuntu/spr-fast/tools/coreutils-build.py -p /home/ubuntu/spr-fast/benchmarks/coreutils-deps -c -d src/tail.c /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src __args >>/home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/build.log 2>&1
+going to directory /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src
+error: unknown argument: '-n'
+warning: LC_ALL=C: 'linker' input unused
+warning: sed: 'linker' input unused
+warning: \(DEFAULT_MAX[_A-Z]*\): 'linker' input unused
+warning: \(.*\)/@set: 'linker' input unused
+warning: \1: 'linker' input unused
+warning: \2/p': 'linker' input unused
+warning: >: 'linker' input unused
+warning: t-constants.texi: 'linker' input unused
+src/tail.c:28:10: fatal error: 'config.h' file not found
+#include <config.h>
+         ^
+Skipping returnreturn addifexit:Priority 12467
+At location src/tail.c:327
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(f, f->name, f->fd, f->size, f->dev, f->ino, f->mode, f->blocking, f->ignore, f->n_unchanged_stats, f->tailable, f->errnum)))
+    return 0;
+return ((strcmp(f->name, "-") == 0) ? gettext("standard input") : f->name);
+
+....
+IsErr:priority 4959
+at location src/tail.c:1528
+--src file: src/tail.c
+fragment 0:
+if (!(__abst_hole(fd, f, reopen_inaccessible_files, forever, have_read_stdin, ok, is_stdin, print_headers)))
+    if (fd == -1) {
+        if (forever) {
+            f->fd = -1;
+            f->errnum = (*__errno_location());
+            f->ignore = 0;
+            f->ino = 0;
+            f->dev = 0;
+        }
+        error(0, (*__errno_location()), gettext("cannot open %s for reading"), quote(pretty_name(f)));
+        ok = 0;
+    } else {
+        if (print_headers)
+            write_header(pretty_name(f));
+        if (forever) {
+            struct stat stats;
+            f->errnum = ok - 1;
+            if (fstat(fd, &stats) < 0) {
+                ok = 0;
+                f->errnum = (*__errno_location());
+                error(0, (*__errno_location()), gettext("error reading %s"), quote(pretty_name(f)));
+            } else if (!(((((stats.st_mode)) & 61440) == (32768)) || ((((stats.st_mode)) & 61440) == (4096)) || ((((stats.st_mode)) & 61440) == (49152)) || ((((stats.st_mode)) & 61440) == (8192)))) {
+                error(0, 0, gettext("%s: cannot follow end of this type of file; giving up on this name"), pretty_name(f));
+                ok = 0;
+                f->errnum = -1;
+                f->ignore = 1;
+            }
+            if (!ok) {
+                close_fd(fd, pretty_name(f));
+                f->fd = -1;
+            } else {
+            }
+        } else {
+            if (!is_stdin && close(fd)) {
+                error(0, (*__errno_location()), gettext("error reading %s"), quote(pretty_name(f)));
+                ok = 0;
+            }
+        }
+    }
+
+....
+Skipping error ifguard:Priority 4959
+At location src/tail.c:1528
+--Src File: src/tail.c
+Fragment 0:
+if (!(__abst_hole(fd, f, reopen_inaccessible_files, forever, have_read_stdin, ok, is_stdin, print_headers)))
+    if (fd == -1) {
+        if (forever) {
+            f->fd = -1;
+            f->errnum = (*__errno_location());
+            f->ignore = 0;
+            f->ino = 0;
+            f->dev = 0;
+        }
+        error(0, (*__errno_location()), gettext("cannot open %s for reading"), quote(pretty_name(f)));
+        ok = 0;
+    } else {
+        if (print_headers)
+            write_header(pretty_name(f));
+        if (forever) {
+            struct stat stats;
+            f->errnum = ok - 1;
+            if (fstat(fd, &stats) < 0) {
+                ok = 0;
+                f->errnum = (*__errno_location());
+                error(0, (*__errno_location()), gettext("error reading %s"), quote(pretty_name(f)));
+            } else if (!(((((stats.st_mode)) & 61440) == (32768)) || ((((stats.st_mode)) & 61440) == (4096)) || ((((stats.st_mode)) & 61440) == (49152)) || ((((stats.st_mode)) & 61440) == (8192)))) {
+                error(0, 0, gettext("%s: cannot follow end of this type of file; giving up on this name"), pretty_name(f));
+                ok = 0;
+                f->errnum = -1;
+                f->ignore = 1;
+            }
+            if (!ok) {
+                close_fd(fd, pretty_name(f));
+                f->fd = -1;
+            } else {
+            }
+        } else {
+            if (!is_stdin && close(fd)) {
+                error(0, (*__errno_location()), gettext("error reading %s"), quote(pretty_name(f)));
+                ok = 0;
+            }
+        }
+    }
+
+....
+IsErr:priority 4960
+at location src/tail.c:1530
+--src file: src/tail.c
+fragment 0:
+if (!(__abst_hole(forever, f, fd, reopen_inaccessible_files, ok, have_read_stdin, is_stdin, print_headers)))
+    if (forever) {
+        f->fd = -1;
+        f->errnum = (*__errno_location());
+        f->ignore = 0;
+        f->ino = 0;
+        f->dev = 0;
+    }
+
+....
+Skipping error ifguard:Priority 4960
+At location src/tail.c:1530
+--Src File: src/tail.c
+Fragment 0:
+if (!(__abst_hole(forever, f, fd, reopen_inaccessible_files, ok, have_read_stdin, is_stdin, print_headers)))
+    if (forever) {
+        f->fd = -1;
+        f->errnum = (*__errno_location());
+        f->ignore = 0;
+        f->ino = 0;
+        f->dev = 0;
+    }
+
+....
+Skipping nonlast:Priority -101
+At location src/tail.c:1614
+--Src File: src/tail.c
+Fragment 0:
+if (!(argc == 2 || (argc == 3 && !(argv[2][0] == '-' && argv[2][1])) || (3 <= argc && argc <= 4 && (strcmp(argv[2], "--") == 0))))
+    return 0;
+const char *p;
+
+....
+Skipping nonlast:Priority -100
+At location src/tail.c:1615
+--Src File: src/tail.c
+Fragment 0:
+if (!(argc == 2 || (argc == 3 && !(argv[2][0] == '-' && argv[2][1])) || (3 <= argc && argc <= 4 && (strcmp(argv[2], "--") == 0))))
+    return 0;
+const char *n_string;
+
+....
+Skipping nonlast:Priority -100
+At location src/tail.c:1615
+--Src File: src/tail.c
+Fragment 0:
+if (*p)
+    return 0;
+const char *n_string;
+
+....
+Skipping nonlast:Priority -99
+At location src/tail.c:1616
+--Src File: src/tail.c
+Fragment 0:
+if (!(argc == 2 || (argc == 3 && !(argv[2][0] == '-' && argv[2][1])) || (3 <= argc && argc <= 4 && (strcmp(argv[2], "--") == 0))))
+    return 0;
+const char *n_string_end;
+
+....
+Skipping nonlast:Priority -99
+At location src/tail.c:1616
+--Src File: src/tail.c
+Fragment 0:
+if (*p)
+    return 0;
+const char *n_string_end;
+
+....
+Skipping nonlast:Priority -98
+At location src/tail.c:1617
+--Src File: src/tail.c
+Fragment 0:
+if (!(argc == 2 || (argc == 3 && !(argv[2][0] == '-' && argv[2][1])) || (3 <= argc && argc <= 4 && (strcmp(argv[2], "--") == 0))))
+    return 0;
+bool obsolete_usage;
+
+....
+Skipping nonlast:Priority -98
+At location src/tail.c:1617
+--Src File: src/tail.c
+Fragment 0:
+if (*p)
+    return 0;
+bool obsolete_usage;
+
+....
+Skipping nonlast:Priority -97
+At location src/tail.c:1618
+--Src File: src/tail.c
+Fragment 0:
+if (!(argc == 2 || (argc == 3 && !(argv[2][0] == '-' && argv[2][1])) || (3 <= argc && argc <= 4 && (strcmp(argv[2], "--") == 0))))
+    return 0;
+int default_count = 10;
+
+....
+Skipping nonlast:Priority -97
+At location src/tail.c:1618
+--Src File: src/tail.c
+Fragment 0:
+if (!obsolete_usage && !p[p[0] == 'c'])
+    return 0;
+int default_count = 10;
+
+....
+Skipping nonlast:Priority -97
+At location src/tail.c:1618
+--Src File: src/tail.c
+Fragment 0:
+if (!obsolete_usage)
+    return 0;
+int default_count = 10;
+
+....
+Skipping nonlast:Priority -97
+At location src/tail.c:1618
+--Src File: src/tail.c
+Fragment 0:
+if (*p)
+    return 0;
+int default_count = 10;
+
+....
+Skipping nonlast:Priority -96
+At location src/tail.c:1619
+--Src File: src/tail.c
+Fragment 0:
+if (!(argc == 2 || (argc == 3 && !(argv[2][0] == '-' && argv[2][1])) || (3 <= argc && argc <= 4 && (strcmp(argv[2], "--") == 0))))
+    return 0;
+bool t_from_start;
+
+....
+Skipping nonlast:Priority -96
+At location src/tail.c:1619
+--Src File: src/tail.c
+Fragment 0:
+if (!obsolete_usage && !p[p[0] == 'c'])
+    return 0;
+bool t_from_start;
+
+....
+Skipping nonlast:Priority -96
+At location src/tail.c:1619
+--Src File: src/tail.c
+Fragment 0:
+if (!obsolete_usage)
+    return 0;
+bool t_from_start;
+
+....
+Skipping nonlast:Priority -96
+At location src/tail.c:1619
+--Src File: src/tail.c
+Fragment 0:
+if (*p)
+    return 0;
+bool t_from_start;
+
+....
+Skipping nonlast:Priority -95
+At location src/tail.c:1620
+--Src File: src/tail.c
+Fragment 0:
+if (!(argc == 2 || (argc == 3 && !(argv[2][0] == '-' && argv[2][1])) || (3 <= argc && argc <= 4 && (strcmp(argv[2], "--") == 0))))
+    return 0;
+bool t_count_lines = 1;
+
+....
+Skipping nonlast:Priority -95
+At location src/tail.c:1620
+--Src File: src/tail.c
+Fragment 0:
+if (!obsolete_usage && !p[p[0] == 'c'])
+    return 0;
+bool t_count_lines = 1;
+
+....
+Skipping nonlast:Priority -95
+At location src/tail.c:1620
+--Src File: src/tail.c
+Fragment 0:
+if (!obsolete_usage)
+    return 0;
+bool t_count_lines = 1;
+
+....
+Skipping nonlast:Priority -95
+At location src/tail.c:1620
+--Src File: src/tail.c
+Fragment 0:
+if (*p)
+    return 0;
+bool t_count_lines = 1;
+
+....
+Skipping nonlast:Priority -94
+At location src/tail.c:1621
+--Src File: src/tail.c
+Fragment 0:
+if (!(argc == 2 || (argc == 3 && !(argv[2][0] == '-' && argv[2][1])) || (3 <= argc && argc <= 4 && (strcmp(argv[2], "--") == 0))))
+    return 0;
+bool t_forever = 0;
+
+....
+Skipping nonlast:Priority -94
+At location src/tail.c:1621
+--Src File: src/tail.c
+Fragment 0:
+if (!obsolete_usage && !p[p[0] == 'c'])
+    return 0;
+bool t_forever = 0;
+
+....
+Skipping nonlast:Priority -94
+At location src/tail.c:1621
+--Src File: src/tail.c
+Fragment 0:
+if (!obsolete_usage)
+    return 0;
+bool t_forever = 0;
+
+....
+Skipping nonlast:Priority -94
+At location src/tail.c:1621
+--Src File: src/tail.c
+Fragment 0:
+if (*p)
+    return 0;
+bool t_forever = 0;
+
+....
+Skipping nonlast:Priority 7407
+At location src/tail.c:1625
+--Src File: src/tail.c
+Fragment 0:
+if (!(argc == 2 || (argc == 3 && !(argv[2][0] == '-' && argv[2][1])) || (3 <= argc && argc <= 4 && (strcmp(argv[2], "--") == 0))))
+    return 0;
+if (!(argc == 2 || (argc == 3 && !(argv[2][0] == '-' && argv[2][1])) || (3 <= argc && argc <= 4 && (strcmp(argv[2], "--") == 0))))
+    return 0;
+
+....
+Skipping nonlast:Priority 7407
+At location src/tail.c:1625
+--Src File: src/tail.c
+Fragment 0:
+if (!obsolete_usage && !p[p[0] == 'c'])
+    return 0;
+if (!(argc == 2 || (argc == 3 && !(argv[2][0] == '-' && argv[2][1])) || (3 <= argc && argc <= 4 && (strcmp(argv[2], "--") == 0))))
+    return 0;
+
+....
+Skipping nonlast:Priority 7407
+At location src/tail.c:1625
+--Src File: src/tail.c
+Fragment 0:
+if (!obsolete_usage)
+    return 0;
+if (!(argc == 2 || (argc == 3 && !(argv[2][0] == '-' && argv[2][1])) || (3 <= argc && argc <= 4 && (strcmp(argv[2], "--") == 0))))
+    return 0;
+
+....
+Skipping nonlast:Priority 7407
+At location src/tail.c:1625
+--Src File: src/tail.c
+Fragment 0:
+if (*p)
+    return 0;
+if (!(argc == 2 || (argc == 3 && !(argv[2][0] == '-' && argv[2][1])) || (3 <= argc && argc <= 4 && (strcmp(argv[2], "--") == 0))))
+    return 0;
+
+....
+Skipping nonlast:Priority -92
+At location src/tail.c:1628
+--Src File: src/tail.c
+Fragment 0:
+{
+    if (!(argc == 2 || (argc == 3 && !(argv[2][0] == '-' && argv[2][1])) || (3 <= argc && argc <= 4 && (strcmp(argv[2], "--") == 0))))
+        return 0;
+    return 0;
+}
+
+....
+Skipping nonlast:Priority -92
+At location src/tail.c:1628
+--Src File: src/tail.c
+Fragment 0:
+{
+    if (!obsolete_usage && !p[p[0] == 'c'])
+        return 0;
+    return 0;
+}
+
+....
+Skipping nonlast:Priority -92
+At location src/tail.c:1628
+--Src File: src/tail.c
+Fragment 0:
+{
+    if (!obsolete_usage)
+        return 0;
+    return 0;
+}
+
+....
+Skipping nonlast:Priority -92
+At location src/tail.c:1628
+--Src File: src/tail.c
+Fragment 0:
+{
+    if (*p)
+        return 0;
+    return 0;
+}
+
+....
+Skipping nonlast addifexit:Priority 4912
+At location src/tail.c:1699
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argc, argv, forever, follow_mode, reopen_inaccessible_files, count_lines, from_start, pid, presume_input_pipe, header_mode, sleep_interval)))
+    return;
+int c;
+
+....
+Skipping nonlast addifexit:Priority 12413
+At location src/tail.c:1701
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argc, argv, c, forever, follow_mode, reopen_inaccessible_files, count_lines, from_start, pid, presume_input_pipe, header_mode, sleep_interval)))
+    return;
+while ((c = getopt_long(argc, argv, "c:n:fFqs:v0123456789", long_options, ((void *)0))) != -1)
+    {
+        switch (c) {
+          case 'F':
+            forever = 1;
+            follow_mode = Follow_name;
+            reopen_inaccessible_files = 1;
+            break;
+          case 'c':
+          case 'n':
+            count_lines = (c == 'n');
+            if (*optarg == '+')
+                from_start = 1;
+            else if (*optarg == '-')
+                ++optarg;
+            {
+            }
+            break;
+          case 'f':
+          case LONG_FOLLOW_OPTION:
+            forever = 1;
+            if (optarg == ((void *)0))
+                follow_mode = Follow_descriptor;
+            else
+                follow_mode = XARGMATCH("--follow", optarg, follow_mode_string, follow_mode_map);
+            break;
+          case RETRY_OPTION:
+            reopen_inaccessible_files = 1;
+            break;
+          case MAX_UNCHANGED_STATS_OPTION:
+            ;
+            break;
+          case PID_OPTION:
+            {
+                unsigned long tmp_ulong;
+                pid = tmp_ulong;
+            }
+            break;
+          case PRESUME_INPUT_PIPE_OPTION:
+            presume_input_pipe = 1;
+            break;
+          case 'q':
+            *header_mode = never;
+            break;
+          case 's':
+            {
+                double s;
+                *sleep_interval = s;
+            }
+            break;
+          case 'v':
+            *header_mode = always;
+            break;
+          case GETOPT_HELP_CHAR:
+            usage(0);
+            break;
+            ;
+          case GETOPT_VERSION_CHAR:
+            ;
+            exit(0);
+            break;
+            ;
+          case '0':
+          case '1':
+          case '2':
+          case '3':
+          case '4':
+          case '5':
+          case '6':
+          case '7':
+          case '8':
+          case '9':
+            error(1, 0, gettext("option used in invalid context -- %c"), c);
+          default:
+            usage(1);
+        }
+    }
+
+....
+Skipping isstmt addifexit:Priority 9933
+At location src/tail.c:1705
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(c, forever, argc, argv, follow_mode, reopen_inaccessible_files, count_lines, from_start, pid, presume_input_pipe, header_mode, sleep_interval)))
+    return;
+switch (c) {
+  case 'F':
+    forever = 1;
+    follow_mode = Follow_name;
+    reopen_inaccessible_files = 1;
+    break;
+  case 'c':
+  case 'n':
+    count_lines = (c == 'n');
+    if (*optarg == '+')
+        from_start = 1;
+    else if (*optarg == '-')
+        ++optarg;
+    {
+    }
+    break;
+  case 'f':
+  case LONG_FOLLOW_OPTION:
+    forever = 1;
+    if (optarg == ((void *)0))
+        follow_mode = Follow_descriptor;
+    else
+        follow_mode = XARGMATCH("--follow", optarg, follow_mode_string, follow_mode_map);
+    break;
+  case RETRY_OPTION:
+    reopen_inaccessible_files = 1;
+    break;
+  case MAX_UNCHANGED_STATS_OPTION:
+    ;
+    break;
+  case PID_OPTION:
+    {
+        unsigned long tmp_ulong;
+        pid = tmp_ulong;
+    }
+    break;
+  case PRESUME_INPUT_PIPE_OPTION:
+    presume_input_pipe = 1;
+    break;
+  case 'q':
+    *header_mode = never;
+    break;
+  case 's':
+    {
+        double s;
+        *sleep_interval = s;
+    }
+    break;
+  case 'v':
+    *header_mode = always;
+    break;
+  case GETOPT_HELP_CHAR:
+    usage(0);
+    break;
+    ;
+  case GETOPT_VERSION_CHAR:
+    ;
+    exit(0);
+    break;
+    ;
+  case '0':
+  case '1':
+  case '2':
+  case '3':
+  case '4':
+  case '5':
+  case '6':
+  case '7':
+  case '8':
+  case '9':
+    error(1, 0, gettext("option used in invalid context -- %c"), c);
+  default:
+    usage(1);
+}
+
+....
+Skipping isstmt addifexit:Priority 9933
+At location src/tail.c:1705
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(c, forever, argc, argv, follow_mode, reopen_inaccessible_files, count_lines, from_start, pid, presume_input_pipe, header_mode, sleep_interval)))
+    break;
+switch (c) {
+  case 'F':
+    forever = 1;
+    follow_mode = Follow_name;
+    reopen_inaccessible_files = 1;
+    break;
+  case 'c':
+  case 'n':
+    count_lines = (c == 'n');
+    if (*optarg == '+')
+        from_start = 1;
+    else if (*optarg == '-')
+        ++optarg;
+    {
+    }
+    break;
+  case 'f':
+  case LONG_FOLLOW_OPTION:
+    forever = 1;
+    if (optarg == ((void *)0))
+        follow_mode = Follow_descriptor;
+    else
+        follow_mode = XARGMATCH("--follow", optarg, follow_mode_string, follow_mode_map);
+    break;
+  case RETRY_OPTION:
+    reopen_inaccessible_files = 1;
+    break;
+  case MAX_UNCHANGED_STATS_OPTION:
+    ;
+    break;
+  case PID_OPTION:
+    {
+        unsigned long tmp_ulong;
+        pid = tmp_ulong;
+    }
+    break;
+  case PRESUME_INPUT_PIPE_OPTION:
+    presume_input_pipe = 1;
+    break;
+  case 'q':
+    *header_mode = never;
+    break;
+  case 's':
+    {
+        double s;
+        *sleep_interval = s;
+    }
+    break;
+  case 'v':
+    *header_mode = always;
+    break;
+  case GETOPT_HELP_CHAR:
+    usage(0);
+    break;
+    ;
+  case GETOPT_VERSION_CHAR:
+    ;
+    exit(0);
+    break;
+    ;
+  case '0':
+  case '1':
+  case '2':
+  case '3':
+  case '4':
+  case '5':
+  case '6':
+  case '7':
+  case '8':
+  case '9':
+    error(1, 0, gettext("option used in invalid context -- %c"), c);
+  default:
+    usage(1);
+}
+
+....
+Skipping nonlast addifexit:Priority 3668
+At location src/tail.c:1737
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(follow_mode, forever, reopen_inaccessible_files, from_start, c, count_lines, pid, argc, argv, presume_input_pipe, header_mode, sleep_interval)))
+    return;
+if (optarg == ((void *)0))
+    follow_mode = Follow_descriptor;
+else
+    follow_mode = XARGMATCH("--follow", optarg, follow_mode_string, follow_mode_map);
+
+....
+Skipping nonlast addifexit:Priority 3668
+At location src/tail.c:1737
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(follow_mode, forever, reopen_inaccessible_files, from_start, c, count_lines, pid, argc, argv, presume_input_pipe, header_mode, sleep_interval)))
+    break;
+if (optarg == ((void *)0))
+    follow_mode = Follow_descriptor;
+else
+    follow_mode = XARGMATCH("--follow", optarg, follow_mode_string, follow_mode_map);
+
+....
+Skipping nonlast addifexit:Priority 4919
+At location src/tail.c:1740
+--Src File: src/tail.c
+Fragment 0:
+{
+    if ((__abst_hole(follow_mode, forever, reopen_inaccessible_files, from_start, c, count_lines, pid, presume_input_pipe, argc, argv, header_mode, sleep_interval)))
+        return;
+    follow_mode = XARGMATCH("--follow", optarg, follow_mode_string, follow_mode_map);
+}
+
+....
+Skipping nonlast addifexit:Priority 4919
+At location src/tail.c:1740
+--Src File: src/tail.c
+Fragment 0:
+{
+    if ((__abst_hole(follow_mode, forever, reopen_inaccessible_files, from_start, c, count_lines, pid, presume_input_pipe, argc, argv, header_mode, sleep_interval)))
+        break;
+    follow_mode = XARGMATCH("--follow", optarg, follow_mode_string, follow_mode_map);
+}
+
+....
+Skipping nonlast addifexit:Priority 4932
+At location src/tail.c:1742
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(follow_mode, reopen_inaccessible_files, forever, from_start, c, count_lines, pid, presume_input_pipe, header_mode, argc, argv, sleep_interval)))
+    return;
+break;
+
+....
+Skipping nonlast addifexit:Priority 4932
+At location src/tail.c:1742
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(follow_mode, reopen_inaccessible_files, forever, from_start, c, count_lines, pid, presume_input_pipe, header_mode, argc, argv, sleep_interval)))
+    break;
+break;
+
+....
+Skipping nonlast addifexit:Priority 4934
+At location src/tail.c:1746
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(reopen_inaccessible_files, follow_mode, forever, pid, from_start, presume_input_pipe, c, count_lines, header_mode, sleep_interval, argc, argv)))
+    return;
+break;
+
+....
+Skipping nonlast addifexit:Priority 4934
+At location src/tail.c:1746
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(reopen_inaccessible_files, follow_mode, forever, pid, from_start, presume_input_pipe, c, count_lines, header_mode, sleep_interval, argc, argv)))
+    break;
+break;
+
+....
+Skipping nonlast addifexit:Priority 4914
+At location src/tail.c:1784
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(sleep_interval, header_mode, presume_input_pipe, pid, c, reopen_inaccessible_files, follow_mode, forever, from_start, count_lines, argc, argv)))
+    return;
+double s;
+
+....
+Skipping nonlast addifexit:Priority 4914
+At location src/tail.c:1784
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(sleep_interval, header_mode, presume_input_pipe, pid, c, reopen_inaccessible_files, follow_mode, forever, from_start, count_lines, argc, argv)))
+    break;
+double s;
+
+....
+Skipping only addifexit:Priority 9916
+At location src/tail.c:1788
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(sleep_interval, header_mode, presume_input_pipe, c, pid, reopen_inaccessible_files, follow_mode, forever, from_start, count_lines, argc, argv)))
+    return;
+*sleep_interval = s;
+
+....
+Skipping only addifexit:Priority 9916
+At location src/tail.c:1788
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(sleep_interval, header_mode, presume_input_pipe, c, pid, reopen_inaccessible_files, follow_mode, forever, from_start, count_lines, argc, argv)))
+    break;
+*sleep_interval = s;
+
+....
+Skipping nonlast addifexit:Priority 4917
+At location src/tail.c:1790
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(sleep_interval, header_mode, c, presume_input_pipe, reopen_inaccessible_files, follow_mode, pid, forever, from_start, count_lines, argc, argv)))
+    return;
+break;
+
+....
+Skipping nonlast addifexit:Priority 4917
+At location src/tail.c:1790
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(sleep_interval, header_mode, c, presume_input_pipe, reopen_inaccessible_files, follow_mode, pid, forever, from_start, count_lines, argc, argv)))
+    break;
+break;
+
+....
+IsErr:priority 4935
+at location src/tail.c:1810
+--src file: src/tail.c
+fragment 0:
+if (!(__abst_hole(reopen_inaccessible_files, follow_mode, forever, pid, c, header_mode, sleep_interval, presume_input_pipe, from_start, count_lines, argc, argv)))
+    if (reopen_inaccessible_files && follow_mode != follow_name)
+        error(0, 0, gettext("warning: --retry is useful mainly when following by name"));
+
+....
+Skipping error ifguard:Priority 4935
+At location src/tail.c:1810
+--Src File: src/tail.c
+Fragment 0:
+if (!(__abst_hole(reopen_inaccessible_files, follow_mode, forever, pid, c, header_mode, sleep_interval, presume_input_pipe, from_start, count_lines, argc, argv)))
+    if (reopen_inaccessible_files && follow_mode != Follow_name)
+        error(0, 0, gettext("warning: --retry is useful mainly when following by name"));
+
+....
+Skipping nonlast addifexit:Priority 3685
+At location src/tail.c:1810
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(reopen_inaccessible_files, follow_mode, forever, pid, c, header_mode, sleep_interval, presume_input_pipe, from_start, count_lines, argc, argv)))
+    return;
+if (reopen_inaccessible_files && follow_mode != Follow_name)
+    error(0, 0, gettext("warning: --retry is useful mainly when following by name"));
+
+....
+Skipping nonlast addifexit:Priority 4936
+At location src/tail.c:1811
+--Src File: src/tail.c
+Fragment 0:
+{
+    if ((__abst_hole(reopen_inaccessible_files, follow_mode, forever, pid, c, header_mode, sleep_interval, presume_input_pipe, from_start, count_lines, argc, argv)))
+        return;
+    error(0, 0, gettext("warning: --retry is useful mainly when following by name"));
+}
+
+....
+IsErr:priority 4937
+at location src/tail.c:1813
+--src file: src/tail.c
+fragment 0:
+if (!(__abst_hole(forever, pid, reopen_inaccessible_files, follow_mode, c, header_mode, sleep_interval, presume_input_pipe, from_start, count_lines, argc, argv)))
+    if (pid && !forever)
+        error(0, 0, gettext("warning: pid ignored; --pid=pid is useful only when following"));
+    else if (pid && kill(pid, 0) != 0 && (*__errno_location()) == 38) {
+        error(0, 0, gettext("warning: --pid=pid is not supported on this system"));
+        pid = 0;
+    }
+
+....
+Skipping error ifguard:Priority 4937
+At location src/tail.c:1813
+--Src File: src/tail.c
+Fragment 0:
+if (!(__abst_hole(forever, pid, reopen_inaccessible_files, follow_mode, c, header_mode, sleep_interval, presume_input_pipe, from_start, count_lines, argc, argv)))
+    if (pid && !forever)
+        error(0, 0, gettext("warning: PID ignored; --pid=PID is useful only when following"));
+    else if (pid && kill(pid, 0) != 0 && (*__errno_location()) == 38) {
+        error(0, 0, gettext("warning: --pid=PID is not supported on this system"));
+        pid = 0;
+    }
+
+....
+Skipping isstmt addifexit:Priority 3687
+At location src/tail.c:1813
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(forever, pid, reopen_inaccessible_files, follow_mode, c, header_mode, sleep_interval, presume_input_pipe, from_start, count_lines, argc, argv)))
+    return;
+if (pid && !forever)
+    error(0, 0, gettext("warning: PID ignored; --pid=PID is useful only when following"));
+else if (pid && kill(pid, 0) != 0 && (*__errno_location()) == 38) {
+    error(0, 0, gettext("warning: --pid=PID is not supported on this system"));
+    pid = 0;
+}
+
+....
+IsErr:priority 4938
+at location src/tail.c:1816
+--src file: src/tail.c
+fragment 0:
+{
+    if (!(__abst_hole(pid, forever, reopen_inaccessible_files, follow_mode, c, header_mode, sleep_interval, presume_input_pipe, from_start, count_lines, argc, argv)))
+        if (pid && kill(pid, 0) != 0 && (*__errno_location()) == 38) {
+            error(0, 0, gettext("warning: --pid=pid is not supported on this system"));
+            pid = 0;
+        }
+}
+
+....
+Skipping error ifguard:Priority 4938
+At location src/tail.c:1816
+--Src File: src/tail.c
+Fragment 0:
+{
+    if (!(__abst_hole(pid, forever, reopen_inaccessible_files, follow_mode, c, header_mode, sleep_interval, presume_input_pipe, from_start, count_lines, argc, argv)))
+        if (pid && kill(pid, 0) != 0 && (*__errno_location()) == 38) {
+            error(0, 0, gettext("warning: --pid=PID is not supported on this system"));
+            pid = 0;
+        }
+}
+
+....
+Skipping nonlast addifexit:Priority 3688
+At location src/tail.c:1816
+--Src File: src/tail.c
+Fragment 0:
+{
+    if ((__abst_hole(pid, forever, reopen_inaccessible_files, follow_mode, c, header_mode, sleep_interval, presume_input_pipe, from_start, count_lines, argc, argv)))
+        return;
+    if (pid && kill(pid, 0) != 0 && (*__errno_location()) == 38) {
+        error(0, 0, gettext("warning: --pid=PID is not supported on this system"));
+        pid = 0;
+    }
+}
+
+....
+Skipping nonlast addifexit:Priority 4880
+At location src/tail.c:1826
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argv, have_read_stdin, count_lines, forever, from_start, print_headers, argc, follow_mode)))
+    return 0;
+enum header_mode header_mode = multiple_files;
+
+....
+Skipping nonlast addifexit:Priority 4880
+At location src/tail.c:1826
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argv, have_read_stdin, count_lines, forever, from_start, print_headers, argc, follow_mode)))
+    return 1;
+enum header_mode header_mode = multiple_files;
+
+....
+Skipping nonlast addifexit:Priority 4880
+At location src/tail.c:1826
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argv, have_read_stdin, count_lines, forever, from_start, print_headers, argc, follow_mode)))
+    return 6;
+enum header_mode header_mode = multiple_files;
+
+....
+Skipping nonlast addifexit:Priority 4881
+At location src/tail.c:1827
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argv, have_read_stdin, count_lines, forever, from_start, print_headers, argc, follow_mode, header_mode)))
+    return 0;
+bool ok = 1;
+
+....
+Skipping nonlast addifexit:Priority 4881
+At location src/tail.c:1827
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argv, have_read_stdin, count_lines, forever, from_start, print_headers, argc, follow_mode, header_mode)))
+    return 1;
+bool ok = 1;
+
+....
+Skipping nonlast addifexit:Priority 4881
+At location src/tail.c:1827
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argv, have_read_stdin, count_lines, forever, from_start, print_headers, argc, follow_mode, header_mode)))
+    return 6;
+bool ok = 1;
+
+....
+Skipping nonlast addifexit:Priority 4883
+At location src/tail.c:1832
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argv, have_read_stdin, count_lines, forever, from_start, print_headers, argc, follow_mode, header_mode, ok)))
+    return 0;
+int n_files;
+
+....
+Skipping nonlast addifexit:Priority 4883
+At location src/tail.c:1832
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argv, have_read_stdin, count_lines, forever, from_start, print_headers, argc, follow_mode, header_mode, ok)))
+    return 1;
+int n_files;
+
+....
+Skipping nonlast addifexit:Priority 4883
+At location src/tail.c:1832
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argv, have_read_stdin, count_lines, forever, from_start, print_headers, argc, follow_mode, header_mode, ok)))
+    return 6;
+int n_files;
+
+....
+Skipping nonlast addifexit:Priority 4884
+At location src/tail.c:1833
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argv, have_read_stdin, count_lines, forever, from_start, print_headers, argc, n_files, follow_mode, header_mode, ok)))
+    return 0;
+char **file;
+
+....
+Skipping nonlast addifexit:Priority 4884
+At location src/tail.c:1833
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argv, have_read_stdin, count_lines, forever, from_start, print_headers, argc, n_files, follow_mode, header_mode, ok)))
+    return 1;
+char **file;
+
+....
+Skipping nonlast addifexit:Priority 4884
+At location src/tail.c:1833
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argv, have_read_stdin, count_lines, forever, from_start, print_headers, argc, n_files, follow_mode, header_mode, ok)))
+    return 6;
+char **file;
+
+....
+Skipping nonlast addifexit:Priority 4885
+At location src/tail.c:1834
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argv, have_read_stdin, count_lines, forever, from_start, print_headers, argc, n_files, file, follow_mode, header_mode, ok)))
+    return 0;
+struct File_spec *F;
+
+....
+Skipping nonlast addifexit:Priority 4885
+At location src/tail.c:1834
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argv, have_read_stdin, count_lines, forever, from_start, print_headers, argc, n_files, file, follow_mode, header_mode, ok)))
+    return 1;
+struct File_spec *F;
+
+....
+Skipping nonlast addifexit:Priority 4885
+At location src/tail.c:1834
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argv, have_read_stdin, count_lines, forever, from_start, print_headers, argc, n_files, file, follow_mode, header_mode, ok)))
+    return 6;
+struct File_spec *F;
+
+....
+Skipping nonlast addifexit:Priority 4886
+At location src/tail.c:1835
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argv, have_read_stdin, count_lines, forever, from_start, print_headers, argc, n_files, file, follow_mode, F, header_mode, ok)))
+    return 0;
+int i;
+
+....
+Skipping nonlast addifexit:Priority 4886
+At location src/tail.c:1835
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argv, have_read_stdin, count_lines, forever, from_start, print_headers, argc, n_files, file, follow_mode, F, header_mode, ok)))
+    return 1;
+int i;
+
+....
+Skipping nonlast addifexit:Priority 4886
+At location src/tail.c:1835
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argv, have_read_stdin, count_lines, forever, from_start, print_headers, argc, n_files, file, follow_mode, F, header_mode, ok)))
+    return 6;
+int i;
+
+....
+Skipping nonlast addifexit:Priority 4887
+At location src/tail.c:1836
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argv, have_read_stdin, count_lines, forever, from_start, print_headers, argc, n_files, file, i, follow_mode, F, header_mode, ok)))
+    return 0;
+bool obsolete_option;
+
+....
+Skipping nonlast addifexit:Priority 4887
+At location src/tail.c:1836
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argv, have_read_stdin, count_lines, forever, from_start, print_headers, argc, n_files, file, i, follow_mode, F, header_mode, ok)))
+    return 1;
+bool obsolete_option;
+
+....
+Skipping nonlast addifexit:Priority 4887
+At location src/tail.c:1836
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argv, have_read_stdin, count_lines, forever, from_start, print_headers, argc, n_files, file, i, follow_mode, F, header_mode, ok)))
+    return 6;
+bool obsolete_option;
+
+....
+Skipping nonlast addifexit:Priority 4888
+At location src/tail.c:1841
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argv, have_read_stdin, count_lines, forever, from_start, print_headers, argc, obsolete_option, n_files, file, i, follow_mode, F, header_mode, ok)))
+    return 0;
+double sleep_interval = 1.;
+
+....
+Skipping nonlast addifexit:Priority 4888
+At location src/tail.c:1841
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argv, have_read_stdin, count_lines, forever, from_start, print_headers, argc, obsolete_option, n_files, file, i, follow_mode, F, header_mode, ok)))
+    return 1;
+double sleep_interval = 1.;
+
+....
+Skipping nonlast addifexit:Priority 4888
+At location src/tail.c:1841
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argv, have_read_stdin, count_lines, forever, from_start, print_headers, argc, obsolete_option, n_files, file, i, follow_mode, F, header_mode, ok)))
+    return 6;
+double sleep_interval = 1.;
+
+....
+Skipping nonlast addifexit:Priority 4890
+At location src/tail.c:1844
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argv, have_read_stdin, count_lines, forever, from_start, print_headers, argc, obsolete_option, n_files, file, i, follow_mode, F, header_mode, ok)))
+    return 0;
+set_program_name(argv[0]);
+
+....
+Skipping nonlast addifexit:Priority 4890
+At location src/tail.c:1844
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argv, have_read_stdin, count_lines, forever, from_start, print_headers, argc, obsolete_option, n_files, file, i, follow_mode, F, header_mode, ok)))
+    return 1;
+set_program_name(argv[0]);
+
+....
+Skipping nonlast addifexit:Priority 4890
+At location src/tail.c:1844
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argv, have_read_stdin, count_lines, forever, from_start, print_headers, argc, obsolete_option, n_files, file, i, follow_mode, F, header_mode, ok)))
+    return 6;
+set_program_name(argv[0]);
+
+....
+Skipping nonlast addifexit:Priority 4891
+At location src/tail.c:1845
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argv, have_read_stdin, count_lines, forever, from_start, print_headers, argc, obsolete_option, n_files, file, i, follow_mode, F, header_mode, ok)))
+    return 0;
+setlocale(6, "");
+
+....
+Skipping nonlast addifexit:Priority 4891
+At location src/tail.c:1845
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argv, have_read_stdin, count_lines, forever, from_start, print_headers, argc, obsolete_option, n_files, file, i, follow_mode, F, header_mode, ok)))
+    return 1;
+setlocale(6, "");
+
+....
+Skipping nonlast addifexit:Priority 4891
+At location src/tail.c:1845
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argv, have_read_stdin, count_lines, forever, from_start, print_headers, argc, obsolete_option, n_files, file, i, follow_mode, F, header_mode, ok)))
+    return 6;
+setlocale(6, "");
+
+....
+Skipping nonlast addifexit:Priority 4895
+At location src/tail.c:1851
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(have_read_stdin, count_lines, forever, from_start, print_headers, argc, obsolete_option, argv, n_files, file, i, follow_mode, F, header_mode, ok)))
+    return 0;
+have_read_stdin = 0;
+
+....
+Skipping nonlast addifexit:Priority 4895
+At location src/tail.c:1851
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(have_read_stdin, count_lines, forever, from_start, print_headers, argc, obsolete_option, argv, n_files, file, i, follow_mode, F, header_mode, ok)))
+    return 1;
+have_read_stdin = 0;
+
+....
+Skipping nonlast addifexit:Priority 4895
+At location src/tail.c:1851
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(have_read_stdin, count_lines, forever, from_start, print_headers, argc, obsolete_option, argv, n_files, file, i, follow_mode, F, header_mode, ok)))
+    return 6;
+have_read_stdin = 0;
+
+....
+Skipping nonlast addifexit:Priority 4896
+At location src/tail.c:1853
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(count_lines, forever, from_start, print_headers, have_read_stdin, argc, obsolete_option, argv, n_files, file, i, follow_mode, F, header_mode, ok)))
+    return 0;
+count_lines = 1;
+
+....
+Skipping nonlast addifexit:Priority 4896
+At location src/tail.c:1853
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(count_lines, forever, from_start, print_headers, have_read_stdin, argc, obsolete_option, argv, n_files, file, i, follow_mode, F, header_mode, ok)))
+    return 1;
+count_lines = 1;
+
+....
+Skipping nonlast addifexit:Priority 4896
+At location src/tail.c:1853
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(count_lines, forever, from_start, print_headers, have_read_stdin, argc, obsolete_option, argv, n_files, file, i, follow_mode, F, header_mode, ok)))
+    return 6;
+count_lines = 1;
+
+....
+Skipping nonlast addifexit:Priority 4897
+At location src/tail.c:1854
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(forever, from_start, print_headers, count_lines, argc, obsolete_option, argv, have_read_stdin, n_files, file, i, follow_mode, F, header_mode, ok)))
+    return 0;
+forever = from_start = print_headers = 0;
+
+....
+Skipping nonlast addifexit:Priority 4897
+At location src/tail.c:1854
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(forever, from_start, print_headers, count_lines, argc, obsolete_option, argv, have_read_stdin, n_files, file, i, follow_mode, F, header_mode, ok)))
+    return 1;
+forever = from_start = print_headers = 0;
+
+....
+Skipping nonlast addifexit:Priority 4897
+At location src/tail.c:1854
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(forever, from_start, print_headers, count_lines, argc, obsolete_option, argv, have_read_stdin, n_files, file, i, follow_mode, F, header_mode, ok)))
+    return 6;
+forever = from_start = print_headers = 0;
+
+....
+Skipping nonlast addifexit:Priority 4909
+At location src/tail.c:1856
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argc, obsolete_option, argv, forever, from_start, print_headers, count_lines, have_read_stdin, n_files, file, i, follow_mode, F, header_mode, ok)))
+    return 0;
+argc -= obsolete_option;
+
+....
+Skipping nonlast addifexit:Priority 4909
+At location src/tail.c:1856
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argc, obsolete_option, argv, forever, from_start, print_headers, count_lines, have_read_stdin, n_files, file, i, follow_mode, F, header_mode, ok)))
+    return 1;
+argc -= obsolete_option;
+
+....
+Skipping nonlast addifexit:Priority 4909
+At location src/tail.c:1856
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argc, obsolete_option, argv, forever, from_start, print_headers, count_lines, have_read_stdin, n_files, file, i, follow_mode, F, header_mode, ok)))
+    return 6;
+argc -= obsolete_option;
+
+....
+Skipping nonlast addifexit:Priority 4910
+At location src/tail.c:1857
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argv, obsolete_option, argc, forever, from_start, print_headers, count_lines, have_read_stdin, n_files, file, i, follow_mode, F, header_mode, ok)))
+    return 0;
+argv += obsolete_option;
+
+....
+Skipping nonlast addifexit:Priority 4910
+At location src/tail.c:1857
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argv, obsolete_option, argc, forever, from_start, print_headers, count_lines, have_read_stdin, n_files, file, i, follow_mode, F, header_mode, ok)))
+    return 1;
+argv += obsolete_option;
+
+....
+Skipping nonlast addifexit:Priority 4910
+At location src/tail.c:1857
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argv, obsolete_option, argc, forever, from_start, print_headers, count_lines, have_read_stdin, n_files, file, i, follow_mode, F, header_mode, ok)))
+    return 6;
+argv += obsolete_option;
+
+....
+Skipping nonlast addifexit:Priority 3689
+At location src/tail.c:1863
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(from_start, argc, argv, obsolete_option, n_files, file, forever, print_headers, count_lines, have_read_stdin, i, follow_mode, F, header_mode, ok)))
+    return 0;
+if (from_start) {
+}
+
+....
+Skipping nonlast addifexit:Priority 3689
+At location src/tail.c:1863
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(from_start, argc, argv, obsolete_option, n_files, file, forever, print_headers, count_lines, have_read_stdin, i, follow_mode, F, header_mode, ok)))
+    return 1;
+if (from_start) {
+}
+
+....
+Skipping nonlast addifexit:Priority 3689
+At location src/tail.c:1863
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(from_start, argc, argv, obsolete_option, n_files, file, forever, print_headers, count_lines, have_read_stdin, i, follow_mode, F, header_mode, ok)))
+    return 6;
+if (from_start) {
+}
+
+....
+IsErr:priority 4940
+at location src/tail.c:1869
+--src file: src/tail.c
+fragment 0:
+if (!(__abst_hole(argc, n_files, argv, file, from_start, obsolete_option, forever, print_headers, count_lines, have_read_stdin, i, follow_mode, f, header_mode, ok)))
+    if (optind < argc) {
+        n_files = argc - optind;
+        file = argv + optind;
+    } else {
+        static char *dummy_stdin = (char *)"-";
+        n_files = 1;
+        file = &dummy_stdin;
+        if (forever && getenv("posixly_correct")) {
+            struct stat st;
+            int is_a_fifo_or_pipe;
+            if (is_a_fifo_or_pipe < 0)
+                error(1, (*__errno_location()), gettext("standard input"));
+            if (is_a_fifo_or_pipe)
+                forever = 0;
+        }
+    }
+
+....
+Skipping error ifguard:Priority 4940
+At location src/tail.c:1869
+--Src File: src/tail.c
+Fragment 0:
+if (!(__abst_hole(argc, n_files, argv, file, from_start, obsolete_option, forever, print_headers, count_lines, have_read_stdin, i, follow_mode, F, header_mode, ok)))
+    if (optind < argc) {
+        n_files = argc - optind;
+        file = argv + optind;
+    } else {
+        static char *dummy_stdin = (char *)"-";
+        n_files = 1;
+        file = &dummy_stdin;
+        if (forever && getenv("POSIXLY_CORRECT")) {
+            struct stat st;
+            int is_a_fifo_or_pipe;
+            if (is_a_fifo_or_pipe < 0)
+                error(1, (*__errno_location()), gettext("standard input"));
+            if (is_a_fifo_or_pipe)
+                forever = 0;
+        }
+    }
+
+....
+Skipping nonlast addifexit:Priority 3690
+At location src/tail.c:1869
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argc, n_files, argv, file, from_start, obsolete_option, forever, print_headers, count_lines, have_read_stdin, i, follow_mode, F, header_mode, ok)))
+    return 0;
+if (optind < argc) {
+    n_files = argc - optind;
+    file = argv + optind;
+} else {
+    static char *dummy_stdin = (char *)"-";
+    n_files = 1;
+    file = &dummy_stdin;
+    if (forever && getenv("POSIXLY_CORRECT")) {
+        struct stat st;
+        int is_a_fifo_or_pipe;
+        if (is_a_fifo_or_pipe < 0)
+            error(1, (*__errno_location()), gettext("standard input"));
+        if (is_a_fifo_or_pipe)
+            forever = 0;
+    }
+}
+
+....
+Skipping nonlast addifexit:Priority 3690
+At location src/tail.c:1869
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argc, n_files, argv, file, from_start, obsolete_option, forever, print_headers, count_lines, have_read_stdin, i, follow_mode, F, header_mode, ok)))
+    return 1;
+if (optind < argc) {
+    n_files = argc - optind;
+    file = argv + optind;
+} else {
+    static char *dummy_stdin = (char *)"-";
+    n_files = 1;
+    file = &dummy_stdin;
+    if (forever && getenv("POSIXLY_CORRECT")) {
+        struct stat st;
+        int is_a_fifo_or_pipe;
+        if (is_a_fifo_or_pipe < 0)
+            error(1, (*__errno_location()), gettext("standard input"));
+        if (is_a_fifo_or_pipe)
+            forever = 0;
+    }
+}
+
+....
+Skipping nonlast addifexit:Priority 3690
+At location src/tail.c:1869
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argc, n_files, argv, file, from_start, obsolete_option, forever, print_headers, count_lines, have_read_stdin, i, follow_mode, F, header_mode, ok)))
+    return 6;
+if (optind < argc) {
+    n_files = argc - optind;
+    file = argv + optind;
+} else {
+    static char *dummy_stdin = (char *)"-";
+    n_files = 1;
+    file = &dummy_stdin;
+    if (forever && getenv("POSIXLY_CORRECT")) {
+        struct stat st;
+        int is_a_fifo_or_pipe;
+        if (is_a_fifo_or_pipe < 0)
+            error(1, (*__errno_location()), gettext("standard input"));
+        if (is_a_fifo_or_pipe)
+            forever = 0;
+    }
+}
+
+....
+Skipping nonlast addifexit:Priority 9941
+At location src/tail.c:1871
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argc, n_files, argv, file, from_start, obsolete_option, forever, print_headers, count_lines, have_read_stdin, i, follow_mode, F, header_mode, ok)))
+    return 0;
+n_files = argc - optind;
+
+....
+Skipping nonlast addifexit:Priority 9941
+At location src/tail.c:1871
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argc, n_files, argv, file, from_start, obsolete_option, forever, print_headers, count_lines, have_read_stdin, i, follow_mode, F, header_mode, ok)))
+    return 1;
+n_files = argc - optind;
+
+....
+Skipping nonlast addifexit:Priority 9941
+At location src/tail.c:1871
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(argc, n_files, argv, file, from_start, obsolete_option, forever, print_headers, count_lines, have_read_stdin, i, follow_mode, F, header_mode, ok)))
+    return 6;
+n_files = argc - optind;
+
+....
+Skipping nonlast addifexit:Priority 4944
+At location src/tail.c:1904
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(n_files, i, file, forever, follow_mode, F, header_mode, print_headers, argv, argc, from_start, obsolete_option, count_lines, have_read_stdin, ok)))
+    return 0;
+bool found_hyphen = 0;
+
+....
+Skipping nonlast addifexit:Priority 4944
+At location src/tail.c:1904
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(n_files, i, file, forever, follow_mode, F, header_mode, print_headers, argv, argc, from_start, obsolete_option, count_lines, have_read_stdin, ok)))
+    return 1;
+bool found_hyphen = 0;
+
+....
+Skipping nonlast addifexit:Priority 4944
+At location src/tail.c:1904
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(n_files, i, file, forever, follow_mode, F, header_mode, print_headers, argv, argc, from_start, obsolete_option, count_lines, have_read_stdin, ok)))
+    return 6;
+bool found_hyphen = 0;
+
+....
+Skipping nonlast addifexit:Priority 9945
+At location src/tail.c:1906
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(n_files, i, file, found_hyphen, follow_mode, forever, F, header_mode, print_headers, argv, argc, from_start, obsolete_option, have_read_stdin, ok, count_lines)))
+    return 0;
+for (i = 0; i < n_files; i++) 
+    if ((strcmp(file[i], "-") == 0))
+        found_hyphen = 1;
+
+....
+Skipping nonlast addifexit:Priority 9945
+At location src/tail.c:1906
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(n_files, i, file, found_hyphen, follow_mode, forever, F, header_mode, print_headers, argv, argc, from_start, obsolete_option, have_read_stdin, ok, count_lines)))
+    return 1;
+for (i = 0; i < n_files; i++) 
+    if ((strcmp(file[i], "-") == 0))
+        found_hyphen = 1;
+
+....
+Skipping nonlast addifexit:Priority 9945
+At location src/tail.c:1906
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(n_files, i, file, found_hyphen, follow_mode, forever, F, header_mode, print_headers, argv, argc, from_start, obsolete_option, have_read_stdin, ok, count_lines)))
+    return 6;
+for (i = 0; i < n_files; i++) 
+    if ((strcmp(file[i], "-") == 0))
+        found_hyphen = 1;
+
+....
+IsErr:priority 4946
+at location src/tail.c:1911
+--src file: src/tail.c
+fragment 0:
+if (!(__abst_hole(found_hyphen, follow_mode, file, i, n_files, forever, f, header_mode, print_headers, argv, argc, have_read_stdin, ok, from_start, obsolete_option, count_lines)))
+    if (found_hyphen && follow_mode == follow_name)
+        error(1, 0, gettext("cannot follow %s by name"), quote("-"));
+
+....
+Skipping error ifguard:Priority 4946
+At location src/tail.c:1911
+--Src File: src/tail.c
+Fragment 0:
+if (!(__abst_hole(found_hyphen, follow_mode, file, i, n_files, forever, F, header_mode, print_headers, argv, argc, have_read_stdin, ok, from_start, obsolete_option, count_lines)))
+    if (found_hyphen && follow_mode == Follow_name)
+        error(1, 0, gettext("cannot follow %s by name"), quote("-"));
+
+....
+Skipping nonlast addifexit:Priority 3696
+At location src/tail.c:1911
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(found_hyphen, follow_mode, file, i, n_files, forever, F, header_mode, print_headers, argv, argc, have_read_stdin, ok, from_start, obsolete_option, count_lines)))
+    return 0;
+if (found_hyphen && follow_mode == Follow_name)
+    error(1, 0, gettext("cannot follow %s by name"), quote("-"));
+
+....
+Skipping nonlast addifexit:Priority 3696
+At location src/tail.c:1911
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(found_hyphen, follow_mode, file, i, n_files, forever, F, header_mode, print_headers, argv, argc, have_read_stdin, ok, from_start, obsolete_option, count_lines)))
+    return 1;
+if (found_hyphen && follow_mode == Follow_name)
+    error(1, 0, gettext("cannot follow %s by name"), quote("-"));
+
+....
+Skipping nonlast addifexit:Priority 3696
+At location src/tail.c:1911
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(found_hyphen, follow_mode, file, i, n_files, forever, F, header_mode, print_headers, argv, argc, have_read_stdin, ok, from_start, obsolete_option, count_lines)))
+    return 6;
+if (found_hyphen && follow_mode == Follow_name)
+    error(1, 0, gettext("cannot follow %s by name"), quote("-"));
+
+....
+IsErr:priority 4947
+at location src/tail.c:1917
+--src file: src/tail.c
+fragment 0:
+if (!(__abst_hole(found_hyphen, forever, n_files, f, i, follow_mode, file, header_mode, print_headers, have_read_stdin, ok, argv, argc, from_start, obsolete_option, count_lines)))
+    if (forever && found_hyphen && isatty(0))
+        error(0, 0, gettext("warning: following standard input indefinitely is ineffective"));
+
+....
+Skipping error ifguard:Priority 4947
+At location src/tail.c:1917
+--Src File: src/tail.c
+Fragment 0:
+if (!(__abst_hole(found_hyphen, forever, n_files, F, i, follow_mode, file, header_mode, print_headers, have_read_stdin, ok, argv, argc, from_start, obsolete_option, count_lines)))
+    if (forever && found_hyphen && isatty(0))
+        error(0, 0, gettext("warning: following standard input indefinitely is ineffective"));
+
+....
+Skipping isstmt addifexit:Priority 3697
+At location src/tail.c:1917
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(found_hyphen, forever, n_files, F, i, follow_mode, file, header_mode, print_headers, have_read_stdin, ok, argv, argc, from_start, obsolete_option, count_lines)))
+    return 0;
+if (forever && found_hyphen && isatty(0))
+    error(0, 0, gettext("warning: following standard input indefinitely is ineffective"));
+
+....
+Skipping isstmt addifexit:Priority 3697
+At location src/tail.c:1917
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(found_hyphen, forever, n_files, F, i, follow_mode, file, header_mode, print_headers, have_read_stdin, ok, argv, argc, from_start, obsolete_option, count_lines)))
+    return 1;
+if (forever && found_hyphen && isatty(0))
+    error(0, 0, gettext("warning: following standard input indefinitely is ineffective"));
+
+....
+Skipping isstmt addifexit:Priority 3697
+At location src/tail.c:1917
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(found_hyphen, forever, n_files, F, i, follow_mode, file, header_mode, print_headers, have_read_stdin, ok, argv, argc, from_start, obsolete_option, count_lines)))
+    return 6;
+if (forever && found_hyphen && isatty(0))
+    error(0, 0, gettext("warning: following standard input indefinitely is ineffective"));
+
+....
+Skipping nonlast addifexit:Priority 4948
+At location src/tail.c:1922
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(n_files, F, i, file, header_mode, forever, print_headers, follow_mode, have_read_stdin, ok, argv, argc, from_start, obsolete_option, count_lines)))
+    return 0;
+F = xnmalloc(n_files, sizeof *F);
+
+....
+Skipping nonlast addifexit:Priority 4948
+At location src/tail.c:1922
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(n_files, F, i, file, header_mode, forever, print_headers, follow_mode, have_read_stdin, ok, argv, argc, from_start, obsolete_option, count_lines)))
+    return 1;
+F = xnmalloc(n_files, sizeof *F);
+
+....
+Skipping nonlast addifexit:Priority 4948
+At location src/tail.c:1922
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(n_files, F, i, file, header_mode, forever, print_headers, follow_mode, have_read_stdin, ok, argv, argc, from_start, obsolete_option, count_lines)))
+    return 6;
+F = xnmalloc(n_files, sizeof *F);
+
+....
+Skipping nonlast addifexit:Priority 4949
+At location src/tail.c:1923
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(n_files, i, file, F, F[i].name, header_mode, print_headers, forever, follow_mode, have_read_stdin, ok, argv, argc, from_start, obsolete_option, count_lines, F[i].fd, F[i].size, F[i].dev, F[i].ino, F[i].mode, F[i].blocking, F[i].ignore, F[i].n_unchanged_stats, F[i].tailable, F[i].errnum)))
+    return 0;
+for (i = 0; i < n_files; i++) 
+    F[i].name = file[i];
+
+....
+Skipping nonlast addifexit:Priority 4949
+At location src/tail.c:1923
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(n_files, i, file, F, F[i].name, header_mode, print_headers, forever, follow_mode, have_read_stdin, ok, argv, argc, from_start, obsolete_option, count_lines, F[i].fd, F[i].size, F[i].dev, F[i].ino, F[i].mode, F[i].blocking, F[i].ignore, F[i].n_unchanged_stats, F[i].tailable, F[i].errnum)))
+    return 1;
+for (i = 0; i < n_files; i++) 
+    F[i].name = file[i];
+
+....
+Skipping nonlast addifexit:Priority 4949
+At location src/tail.c:1923
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(n_files, i, file, F, F[i].name, header_mode, print_headers, forever, follow_mode, have_read_stdin, ok, argv, argc, from_start, obsolete_option, count_lines, F[i].fd, F[i].size, F[i].dev, F[i].ino, F[i].mode, F[i].blocking, F[i].ignore, F[i].n_unchanged_stats, F[i].tailable, F[i].errnum)))
+    return 6;
+for (i = 0; i < n_files; i++) 
+    F[i].name = file[i];
+
+....
+Skipping nonlast addifexit:Priority 3700
+At location src/tail.c:1926
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(header_mode, n_files, file, F, i, print_headers, forever, follow_mode, have_read_stdin, ok, argv, argc, from_start, obsolete_option, count_lines)))
+    return 0;
+if (header_mode == always || (header_mode == multiple_files && n_files > 1))
+    print_headers = 1;
+
+....
+Skipping nonlast addifexit:Priority 3700
+At location src/tail.c:1926
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(header_mode, n_files, file, F, i, print_headers, forever, follow_mode, have_read_stdin, ok, argv, argc, from_start, obsolete_option, count_lines)))
+    return 1;
+if (header_mode == always || (header_mode == multiple_files && n_files > 1))
+    print_headers = 1;
+
+....
+Skipping nonlast addifexit:Priority 3700
+At location src/tail.c:1926
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(header_mode, n_files, file, F, i, print_headers, forever, follow_mode, have_read_stdin, ok, argv, argc, from_start, obsolete_option, count_lines)))
+    return 6;
+if (header_mode == always || (header_mode == multiple_files && n_files > 1))
+    print_headers = 1;
+
+....
+Skipping nonlast addifexit:Priority 3720
+At location src/tail.c:1936
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(forever, print_headers, header_mode, n_files, file, F, i, have_read_stdin, ok, follow_mode, argv, argc, from_start, obsolete_option, count_lines)))
+    return 0;
+if (forever) {
+    tail_forever(F, n_files, sleep_interval);
+}
+
+....
+Skipping nonlast addifexit:Priority 3720
+At location src/tail.c:1936
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(forever, print_headers, header_mode, n_files, file, F, i, have_read_stdin, ok, follow_mode, argv, argc, from_start, obsolete_option, count_lines)))
+    return 1;
+if (forever) {
+    tail_forever(F, n_files, sleep_interval);
+}
+
+....
+Skipping nonlast addifexit:Priority 3720
+At location src/tail.c:1936
+--Src File: src/tail.c
+Fragment 0:
+if ((__abst_hole(forever, print_headers, header_mode, n_files, file, F, i, have_read_stdin, ok, follow_mode, argv, argc, from_start, obsolete_option, count_lines)))
+    return 6;
+if (forever) {
+    tail_forever(F, n_files, sleep_interval);
+}
+
+....
+Antipattern stats BEGIN: earlyret => 130
+Antipattern stats BEGIN: errorexit => 14
+Antipattern stats BEGIN: singlecfg => 2
+Total 7108 different repair candidate templates!!!!
+Total 7108 different repair candidate templates!!!!
+Total 8174 different repair candidate!!!
+Trying different candidates!
+BasicTester pointer: 0x33f6250
+CondTester pointer: 0x3983c40
+Counter: 1
+Batcher Size:0
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location src/tail.c:1516
+--Src File: src/tail.c
+Fragment 0:
+if ((is_stdin) && !(__abst_hole(is_stdin, f, have_read_stdin, fd, reopen_inaccessible_files, forever, ok, print_headers))) {
+    have_read_stdin = 1;
+    fd = 0;
+} else
+    ;
+
+
+CondTester, a patch instance with id 0:
+Spawn 1 instances, now Total 1
+Counter: 2
+Batcher Size:1
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location src/tail.c:1516
+--Src File: src/tail.c
+Fragment 0:
+if ((is_stdin) || (__abst_hole(is_stdin, f, have_read_stdin, fd, reopen_inaccessible_files, forever, ok, print_headers))) {
+    have_read_stdin = 1;
+    fd = 0;
+} else
+    ;
+
+
+CondTester, a patch instance with id 1:
+Spawn 1 instances, now Total 2
+Counter: 3
+Batcher Size:2
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location src/tail.c:1625
+--Src File: src/tail.c
+Fragment 0:
+if ((!(argc == 2 || (argc == 3 && !(argv[2][0] == '-' && argv[2][1])) || (3 <= argc && argc <= 4 && (strcmp(argv[2], "--") == 0)))) && !(__abst_hole(argc, argv, obsolete_usage, p, t_from_start, n_string, n_string_end, default_count, t_count_lines, t_forever, from_start, count_lines, forever)))
+    return 0;
+
+
+CondTester, a patch instance with id 2:
+Spawn 1 instances, now Total 3
+Counter: 4
+Batcher Size:3
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location src/tail.c:1737
+--Src File: src/tail.c
+Fragment 0:
+if ((optarg == ((void *)0)) && !(__abst_hole(follow_mode, forever, reopen_inaccessible_files, from_start, c, count_lines, pid, argc, argv, presume_input_pipe, header_mode, sleep_interval)))
+    follow_mode = Follow_descriptor;
+else
+    follow_mode = XARGMATCH("--follow", optarg, follow_mode_string, follow_mode_map);
+
+
+CondTester, a patch instance with id 3:
+Spawn 1 instances, now Total 4
+Counter: 5
+Batcher Size:4
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location src/tail.c:1737
+--Src File: src/tail.c
+Fragment 0:
+if ((optarg == ((void *)0)) || (__abst_hole(follow_mode, forever, reopen_inaccessible_files, from_start, c, count_lines, pid, argc, argv, presume_input_pipe, header_mode, sleep_interval)))
+    follow_mode = Follow_descriptor;
+else
+    follow_mode = XARGMATCH("--follow", optarg, follow_mode_string, follow_mode_map);
+
+
+CondTester, a patch instance with id 4:
+Spawn 1 instances, now Total 5
+Counter: 6
+Batcher Size:5
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location src/tail.c:1625
+--Src File: src/tail.c
+Fragment 0:
+if ((!(argc == 2 || (argc == 3 && !(argv[2][0] == '-' && argv[2][1])) || (3 <= argc && argc <= 4 && (strcmp(argv[2], "--") == 0)))) || (__abst_hole(argc, argv, obsolete_usage, p, t_from_start, n_string, n_string_end, default_count, t_count_lines, t_forever, from_start, count_lines, forever)))
+    return 0;
+
+
+CondTester, a patch instance with id 5:
+Spawn 1 instances, now Total 6
+Counter: 7
+Batcher Size:6
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location src/tail.c:1869
+--Src File: src/tail.c
+Fragment 0:
+if ((optind < argc) && !(__abst_hole(argc, n_files, argv, file, from_start, obsolete_option, forever, print_headers, count_lines, have_read_stdin, i, follow_mode, F, header_mode, ok))) {
+    n_files = argc - optind;
+    file = argv + optind;
+} else {
+    static char *dummy_stdin = (char *)"-";
+    n_files = 1;
+    file = &dummy_stdin;
+    if (forever && getenv("POSIXLY_CORRECT")) {
+        struct stat st;
+        int is_a_fifo_or_pipe;
+        if (is_a_fifo_or_pipe < 0)
+            error(1, (*__errno_location()), gettext("standard input"));
+        if (is_a_fifo_or_pipe)
+            forever = 0;
+    }
+}
+
+
+CondTester, a patch instance with id 6:
+Spawn 1 instances, now Total 7
+Counter: 8
+Batcher Size:7
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location src/tail.c:1917
+--Src File: src/tail.c
+Fragment 0:
+if ((forever && found_hyphen && isatty(0)) && !(__abst_hole(found_hyphen, forever, n_files, F, i, follow_mode, file, header_mode, print_headers, have_read_stdin, ok, argv, argc, from_start, obsolete_option, count_lines)))
+    error(0, 0, gettext("warning: following standard input indefinitely is ineffective"));
+
+
+CondTester, a patch instance with id 7:
+Spawn 1 instances, now Total 8
+Counter: 9
+Batcher Size:8
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location src/tail.c:1926
+--Src File: src/tail.c
+Fragment 0:
+if ((header_mode == always || (header_mode == multiple_files && n_files > 1)) && !(__abst_hole(header_mode, n_files, print_headers, file, F, i, forever, follow_mode, have_read_stdin, ok, argv, argc, from_start, obsolete_option, count_lines)))
+    print_headers = 1;
+
+
+CondTester, a patch instance with id 8:
+Spawn 1 instances, now Total 9
+Counter: 10
+Batcher Size:9
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location src/tail.c:1936
+--Src File: src/tail.c
+Fragment 0:
+if ((forever) && !(__abst_hole(forever, print_headers, header_mode, n_files, file, F, i, have_read_stdin, ok, follow_mode, argv, argc, from_start, obsolete_option, count_lines))) {
+    tail_forever(F, n_files, sleep_interval);
+}
+
+
+CondTester, a patch instance with id 9:
+Spawn 1 instances, now Total 10
+Counter: 11
+Batcher Size:10
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location src/tail.c:1936
+--Src File: src/tail.c
+Fragment 0:
+if ((forever) || (__abst_hole(forever, print_headers, header_mode, n_files, file, F, i, have_read_stdin, ok, follow_mode, argv, argc, from_start, obsolete_option, count_lines))) {
+    tail_forever(F, n_files, sleep_interval);
+}
+
+
+CondTester, a patch instance with id 10:
+Spawn 1 instances, now Total 11
+Counter: 12
+Batcher Size:11
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location src/tail.c:1926
+--Src File: src/tail.c
+Fragment 0:
+if ((header_mode == always || (header_mode == multiple_files && n_files > 1)) || (__abst_hole(header_mode, n_files, print_headers, file, F, i, forever, follow_mode, have_read_stdin, ok, argv, argc, from_start, obsolete_option, count_lines)))
+    print_headers = 1;
+
+
+CondTester, a patch instance with id 11:
+Spawn 1 instances, now Total 12
+Counter: 13
+Batcher Size:12
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location src/tail.c:1917
+--Src File: src/tail.c
+Fragment 0:
+if ((forever && found_hyphen && isatty(0)) || (__abst_hole(found_hyphen, forever, n_files, F, i, follow_mode, file, header_mode, print_headers, have_read_stdin, ok, argv, argc, from_start, obsolete_option, count_lines)))
+    error(0, 0, gettext("warning: following standard input indefinitely is ineffective"));
+
+
+CondTester, a patch instance with id 12:
+Spawn 1 instances, now Total 13
+Counter: 14
+Batcher Size:13
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location src/tail.c:1917
+--Src File: src/tail.c
+Fragment 0:
+if (((forever && found_hyphen) || (__abst_hole(found_hyphen, forever, n_files, F, i, follow_mode, file, header_mode, print_headers, have_read_stdin, ok, argv, argc, from_start, obsolete_option, count_lines))) && isatty(0))
+    error(0, 0, gettext("warning: following standard input indefinitely is ineffective"));
+
+
+CondTester, a patch instance with id 13:
+Spawn 1 instances, now Total 14
+Counter: 15
+Batcher Size:14
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location src/tail.c:1869
+--Src File: src/tail.c
+Fragment 0:
+if ((optind < argc) || (__abst_hole(argc, n_files, argv, file, from_start, obsolete_option, forever, print_headers, count_lines, have_read_stdin, i, follow_mode, F, header_mode, ok))) {
+    n_files = argc - optind;
+    file = argv + optind;
+} else {
+    static char *dummy_stdin = (char *)"-";
+    n_files = 1;
+    file = &dummy_stdin;
+    if (forever && getenv("POSIXLY_CORRECT")) {
+        struct stat st;
+        int is_a_fifo_or_pipe;
+        if (is_a_fifo_or_pipe < 0)
+            error(1, (*__errno_location()), gettext("standard input"));
+        if (is_a_fifo_or_pipe)
+            forever = 0;
+    }
+}
+
+
+CondTester, a patch instance with id 14:
+Spawn 1 instances, now Total 15
+Counter: 16
+Batcher Size:15
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location src/tail.c:1911
+--Src File: src/tail.c
+Fragment 0:
+if ((found_hyphen && follow_mode == Follow_name) && !(__abst_hole(found_hyphen, follow_mode, file, i, n_files, forever, F, header_mode, print_headers, argv, argc, have_read_stdin, ok, from_start, obsolete_option, count_lines)))
+    error(1, 0, gettext("cannot follow %s by name"), quote("-"));
+
+
+CondTester, a patch instance with id 15:
+Spawn 1 instances, now Total 16
+Counter: 17
+Batcher Size:16
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location src/tail.c:1911
+--Src File: src/tail.c
+Fragment 0:
+if ((found_hyphen && follow_mode == Follow_name) || (__abst_hole(found_hyphen, follow_mode, file, i, n_files, forever, F, header_mode, print_headers, argv, argc, have_read_stdin, ok, from_start, obsolete_option, count_lines)))
+    error(1, 0, gettext("cannot follow %s by name"), quote("-"));
+
+
+CondTester, a patch instance with id 16:
+Spawn 1 instances, now Total 17
+Counter: 18
+Batcher Size:17
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location src/tail.c:1911
+--Src File: src/tail.c
+Fragment 0:
+if (((found_hyphen) || (__abst_hole(found_hyphen, follow_mode, file, i, n_files, forever, F, header_mode, print_headers, argv, argc, have_read_stdin, ok, from_start, obsolete_option, count_lines))) && follow_mode == Follow_name)
+    error(1, 0, gettext("cannot follow %s by name"), quote("-"));
+
+
+CondTester, a patch instance with id 17:
+Spawn 1 instances, now Total 18
+Counter: 19
+Batcher Size:18
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location src/tail.c:1530
+--Src File: src/tail.c
+Fragment 0:
+if ((forever) && !(__abst_hole(forever, f, fd, reopen_inaccessible_files, ok, have_read_stdin, is_stdin, print_headers))) {
+    f->fd = -1;
+    f->errnum = (*__errno_location());
+    f->ignore = 0;
+    f->ino = 0;
+    f->dev = 0;
+}
+
+
+CondTester, a patch instance with id 18:
+Spawn 1 instances, now Total 19
+Counter: 20
+Batcher Size:19
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location src/tail.c:1863
+--Src File: src/tail.c
+Fragment 0:
+if ((from_start) && !(__abst_hole(from_start, argc, argv, obsolete_option, n_files, file, forever, print_headers, count_lines, have_read_stdin, i, follow_mode, F, header_mode, ok))) {
+}
+
+
+CondTester, a patch instance with id 19:
+Spawn 1 instances, now Total 20
+Counter: 21
+Batcher Size:20
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location src/tail.c:1863
+--Src File: src/tail.c
+Fragment 0:
+if ((from_start) || (__abst_hole(from_start, argc, argv, obsolete_option, n_files, file, forever, print_headers, count_lines, have_read_stdin, i, follow_mode, F, header_mode, ok))) {
+}
+
+
+CondTester, a patch instance with id 20:
+Spawn 1 instances, now Total 21
+Counter: 22
+Batcher Size:21
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location src/tail.c:1530
+--Src File: src/tail.c
+Fragment 0:
+if ((forever) || (__abst_hole(forever, f, fd, reopen_inaccessible_files, ok, have_read_stdin, is_stdin, print_headers))) {
+    f->fd = -1;
+    f->errnum = (*__errno_location());
+    f->ignore = 0;
+    f->ino = 0;
+    f->dev = 0;
+}
+
+
+CondTester, a patch instance with id 21:
+Spawn 1 instances, now Total 22
+Counter: 23
+Batcher Size:22
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location src/tail.c:1528
+--Src File: src/tail.c
+Fragment 0:
+if ((fd == -1) && !(__abst_hole(fd, f, reopen_inaccessible_files, forever, have_read_stdin, ok, is_stdin, print_headers))) {
+    if (forever) {
+        f->fd = -1;
+        f->errnum = (*__errno_location());
+        f->ignore = 0;
+        f->ino = 0;
+        f->dev = 0;
+    }
+    error(0, (*__errno_location()), gettext("cannot open %s for reading"), quote(pretty_name(f)));
+    ok = 0;
+} else {
+    if (print_headers)
+        write_header(pretty_name(f));
+    if (forever) {
+        struct stat stats;
+        f->errnum = ok - 1;
+        if (fstat(fd, &stats) < 0) {
+            ok = 0;
+            f->errnum = (*__errno_location());
+            error(0, (*__errno_location()), gettext("error reading %s"), quote(pretty_name(f)));
+        } else if (!(((((stats.st_mode)) & 61440) == (32768)) || ((((stats.st_mode)) & 61440) == (4096)) || ((((stats.st_mode)) & 61440) == (49152)) || ((((stats.st_mode)) & 61440) == (8192)))) {
+            error(0, 0, gettext("%s: cannot follow end of this type of file; giving up on this name"), pretty_name(f));
+            ok = 0;
+            f->errnum = -1;
+            f->ignore = 1;
+        }
+        if (!ok) {
+            close_fd(fd, pretty_name(f));
+            f->fd = -1;
+        } else {
+        }
+    } else {
+        if (!is_stdin && close(fd)) {
+            error(0, (*__errno_location()), gettext("error reading %s"), quote(pretty_name(f)));
+            ok = 0;
+        }
+    }
+}
+
+
+CondTester, a patch instance with id 22:
+Spawn 1 instances, now Total 23
+Counter: 24
+Batcher Size:23
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location src/tail.c:1528
+--Src File: src/tail.c
+Fragment 0:
+if ((fd == -1) || (__abst_hole(fd, f, reopen_inaccessible_files, forever, have_read_stdin, ok, is_stdin, print_headers))) {
+    if (forever) {
+        f->fd = -1;
+        f->errnum = (*__errno_location());
+        f->ignore = 0;
+        f->ino = 0;
+        f->dev = 0;
+    }
+    error(0, (*__errno_location()), gettext("cannot open %s for reading"), quote(pretty_name(f)));
+    ok = 0;
+} else {
+    if (print_headers)
+        write_header(pretty_name(f));
+    if (forever) {
+        struct stat stats;
+        f->errnum = ok - 1;
+        if (fstat(fd, &stats) < 0) {
+            ok = 0;
+            f->errnum = (*__errno_location());
+            error(0, (*__errno_location()), gettext("error reading %s"), quote(pretty_name(f)));
+        } else if (!(((((stats.st_mode)) & 61440) == (32768)) || ((((stats.st_mode)) & 61440) == (4096)) || ((((stats.st_mode)) & 61440) == (49152)) || ((((stats.st_mode)) & 61440) == (8192)))) {
+            error(0, 0, gettext("%s: cannot follow end of this type of file; giving up on this name"), pretty_name(f));
+            ok = 0;
+            f->errnum = -1;
+            f->ignore = 1;
+        }
+        if (!ok) {
+            close_fd(fd, pretty_name(f));
+            f->fd = -1;
+        } else {
+        }
+    } else {
+        if (!is_stdin && close(fd)) {
+            error(0, (*__errno_location()), gettext("error reading %s"), quote(pretty_name(f)));
+            ok = 0;
+        }
+    }
+}
+
+
+CondTester, a patch instance with id 23:
+Spawn 1 instances, now Total 24
+Counter: 25
+Batcher Size:24
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location src/tail.c:1810
+--Src File: src/tail.c
+Fragment 0:
+if ((reopen_inaccessible_files && follow_mode != Follow_name) && !(__abst_hole(reopen_inaccessible_files, follow_mode, forever, pid, c, header_mode, sleep_interval, presume_input_pipe, from_start, count_lines, argc, argv)))
+    error(0, 0, gettext("warning: --retry is useful mainly when following by name"));
+
+
+CondTester, a patch instance with id 24:
+Spawn 1 instances, now Total 25
+Counter: 26
+Batcher Size:25
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location src/tail.c:1810
+--Src File: src/tail.c
+Fragment 0:
+if ((reopen_inaccessible_files && follow_mode != Follow_name) || (__abst_hole(reopen_inaccessible_files, follow_mode, forever, pid, c, header_mode, sleep_interval, presume_input_pipe, from_start, count_lines, argc, argv)))
+    error(0, 0, gettext("warning: --retry is useful mainly when following by name"));
+
+
+CondTester, a patch instance with id 25:
+Spawn 1 instances, now Total 26
+Counter: 27
+Batcher Size:26
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location src/tail.c:1810
+--Src File: src/tail.c
+Fragment 0:
+if (((reopen_inaccessible_files) || (__abst_hole(reopen_inaccessible_files, follow_mode, forever, pid, c, header_mode, sleep_interval, presume_input_pipe, from_start, count_lines, argc, argv))) && follow_mode != Follow_name)
+    error(0, 0, gettext("warning: --retry is useful mainly when following by name"));
+
+
+CondTester, a patch instance with id 26:
+Spawn 1 instances, now Total 27
+Counter: 28
+Batcher Size:27
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location src/tail.c:1816
+--Src File: src/tail.c
+Fragment 0:
+{
+    if ((pid && kill(pid, 0) != 0 && (*__errno_location()) == 38) && !(__abst_hole(pid, forever, reopen_inaccessible_files, follow_mode, c, header_mode, sleep_interval, presume_input_pipe, from_start, count_lines, argc, argv))) {
+        error(0, 0, gettext("warning: --pid=PID is not supported on this system"));
+        pid = 0;
+    }
+}
+
+
+CondTester, a patch instance with id 27:
+Spawn 1 instances, now Total 28
+Counter: 29
+Batcher Size:28
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location src/tail.c:1816
+--Src File: src/tail.c
+Fragment 0:
+{
+    if ((pid && kill(pid, 0) != 0 && (*__errno_location()) == 38) || (__abst_hole(pid, forever, reopen_inaccessible_files, follow_mode, c, header_mode, sleep_interval, presume_input_pipe, from_start, count_lines, argc, argv))) {
+        error(0, 0, gettext("warning: --pid=PID is not supported on this system"));
+        pid = 0;
+    }
+}
+
+
+CondTester, a patch instance with id 28:
+Spawn 1 instances, now Total 29
+Counter: 30
+Batcher Size:29
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location src/tail.c:1816
+--Src File: src/tail.c
+Fragment 0:
+{
+    if (((pid && kill(pid, 0) != 0) || (__abst_hole(pid, forever, reopen_inaccessible_files, follow_mode, c, header_mode, sleep_interval, presume_input_pipe, from_start, count_lines, argc, argv))) && (*__errno_location()) == 38) {
+        error(0, 0, gettext("warning: --pid=PID is not supported on this system"));
+        pid = 0;
+    }
+}
+
+
+CondTester, a patch instance with id 29:
+Spawn 1 instances, now Total 30
+Counter: 31
+Batcher Size:30
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location src/tail.c:1813
+--Src File: src/tail.c
+Fragment 0:
+if ((pid && !forever) && !(__abst_hole(forever, pid, reopen_inaccessible_files, follow_mode, c, header_mode, sleep_interval, presume_input_pipe, from_start, count_lines, argc, argv)))
+    error(0, 0, gettext("warning: PID ignored; --pid=PID is useful only when following"));
+else if (pid && kill(pid, 0) != 0 && (*__errno_location()) == 38) {
+    error(0, 0, gettext("warning: --pid=PID is not supported on this system"));
+    pid = 0;
+}
+
+
+CondTester, a patch instance with id 30:
+Spawn 1 instances, now Total 31
+Counter: 32
+Batcher Size:31
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location src/tail.c:1813
+--Src File: src/tail.c
+Fragment 0:
+if (((pid) || (__abst_hole(forever, pid, reopen_inaccessible_files, follow_mode, c, header_mode, sleep_interval, presume_input_pipe, from_start, count_lines, argc, argv))) && !forever)
+    error(0, 0, gettext("warning: PID ignored; --pid=PID is useful only when following"));
+else if (pid && kill(pid, 0) != 0 && (*__errno_location()) == 38) {
+    error(0, 0, gettext("warning: --pid=PID is not supported on this system"));
+    pid = 0;
+}
+
+
+CondTester, a patch instance with id 31:
+Spawn 1 instances, now Total 32
+Counter: 33
+Batcher Size:32
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location src/tail.c:1813
+--Src File: src/tail.c
+Fragment 0:
+if ((pid && !forever) || (__abst_hole(forever, pid, reopen_inaccessible_files, follow_mode, c, header_mode, sleep_interval, presume_input_pipe, from_start, count_lines, argc, argv)))
+    error(0, 0, gettext("warning: PID ignored; --pid=PID is useful only when following"));
+else if (pid && kill(pid, 0) != 0 && (*__errno_location()) == 38) {
+    error(0, 0, gettext("warning: --pid=PID is not supported on this system"));
+    pid = 0;
+}
+
+
+CondTester, a patch instance with id 32:
+Spawn 1 instances, now Total 33
+Counter: 34
+Batcher Size:33
+Preprocess the following candidate with BasicTester:
+Priority 7467
+At location src/tail.c:327
+--Src File: src/tail.c
+Fragment 0:
+error(1, (*__errno_location()), gettext("write error"));
+return ((strcmp(f->name, "-") == 0) ? gettext("standard input") : f->name);
+
+
+BasicTester, a patch instance with id 0:
+Spawn 1 instances, now Total 34
+Counter: 35
+Batcher Size:34
+Preprocess the following candidate with BasicTester:
+Priority 7467
+At location src/tail.c:327
+--Src File: src/tail.c
+Fragment 0:
+if (hard_locale(5)) {
+}
+return ((strcmp(f->name, "-") == 0) ? gettext("standard input") : f->name);
+
+
+BasicTester, a patch instance with id 1:
+Spawn 1 instances, now Total 35
+Counter: 36
+Batcher Size:35
+Preprocess the following candidate with BasicTester:
+Priority 7467
+At location src/tail.c:327
+--Src File: src/tail.c
+Fragment 0:
+if (from_start) {
+} else {
+}
+return ((strcmp(f->name, "-") == 0) ? gettext("standard input") : f->name);
+
+
+BasicTester, a patch instance with id 2:
+Spawn 1 instances, now Total 36
+Counter: 37
+Batcher Size:36
+Preprocess the following candidate with BasicTester:
+Priority 7467
+At location src/tail.c:327
+--Src File: src/tail.c
+Fragment 0:
+error(0, 0, gettext("no files remaining"));
+return ((strcmp(f->name, "-") == 0) ? gettext("standard input") : f->name);
+
+
+BasicTester, a patch instance with id 3:
+Spawn 1 instances, now Total 37
+Counter: 38
+Batcher Size:37
+Preprocess the following candidate with BasicTester:
+Priority 7467
+At location src/tail.c:327
+--Src File: src/tail.c
+Fragment 0:
+error(1, (*__errno_location()), gettext("standard input"));
+return ((strcmp(f->name, "-") == 0) ? gettext("standard input") : f->name);
+
+
+BasicTester, a patch instance with id 4:
+Spawn 1 instances, now Total 38
+Counter: 39
+Batcher Size:38
+Preprocess the following candidate with BasicTester:
+Priority 7467
+At location src/tail.c:327
+--Src File: src/tail.c
+Fragment 0:
+if (from_start) {
+}
+return ((strcmp(f->name, "-") == 0) ? gettext("standard input") : f->name);
+
+
+BasicTester, a patch instance with id 5:
+Spawn 1 instances, now Total 39
+Counter: 40
+Batcher Size:39
+Preprocess the following candidate with BasicTester:
+Priority 7467
+At location src/tail.c:327
+--Src File: src/tail.c
+Fragment 0:
+have_read_stdin = 1;
+return ((strcmp(f->name, "-") == 0) ? gettext("standard input") : f->name);
+
+
+BasicTester, a patch instance with id 6:
+Spawn 1 instances, now Total 40
+Counter: 41
+Batcher Size:40
+Preprocess the following candidate with BasicTester:
+Priority 7467
+At location src/tail.c:327
+--Src File: src/tail.c
+Fragment 0:
+have_read_stdin = 0;
+return ((strcmp(f->name, "-") == 0) ? gettext("standard input") : f->name);
+
+
+BasicTester, a patch instance with id 7:
+Spawn 1 instances, now Total 41
+Counter: 42
+Batcher Size:41
+Preprocess the following candidate with BasicTester:
+Priority 7467
+At location src/tail.c:327
+--Src File: src/tail.c
+Fragment 0:
+error(1, (*__errno_location()), gettext("cannot read realtime clock"));
+return ((strcmp(f->name, "-") == 0) ? gettext("standard input") : f->name);
+
+
+BasicTester, a patch instance with id 8:
+Spawn 1 instances, now Total 42
+Counter: 43
+Batcher Size:42
+Preprocess the following candidate with BasicTester:
+Priority 7467
+At location src/tail.c:327
+--Src File: src/tail.c
+Fragment 0:
+from_start = 1;
+return ((strcmp(f->name, "-") == 0) ? gettext("standard input") : f->name);
+
+
+BasicTester, a patch instance with id 9:
+Spawn 1 instances, now Total 43
+a batched test job starts!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/srcMerged code building succ, going to invoke tester!
+BasicTester, Testing instance id 0:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+BasicTester, Testing instance id 1:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+BasicTester, Testing instance id 2:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+BasicTester, Testing instance id 3:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+BasicTester, Testing instance id 4:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+BasicTester, Testing instance id 5:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+BasicTester, Testing instance id 6:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+BasicTester, Testing instance id 7:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+BasicTester, Testing instance id 8:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+BasicTester, Testing instance id 9:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Counter: 44
+Batcher Size:33
+Preprocess the following candidate with BasicTester:
+Priority 7467
+At location src/tail.c:327
+--Src File: src/tail.c
+Fragment 0:
+from_start = 0;
+return ((strcmp(f->name, "-") == 0) ? gettext("standard input") : f->name);
+
+
+BasicTester, a patch instance with id 10:
+Spawn 1 instances, now Total 44
+Counter: 45
+Batcher Size:34
+Preprocess the following candidate with BasicTester:
+Priority 7467
+At location src/tail.c:327
+--Src File: src/tail.c
+Fragment 0:
+(*__errno_location()) = 0;
+return ((strcmp(f->name, "-") == 0) ? gettext("standard input") : f->name);
+
+
+BasicTester, a patch instance with id 11:
+Spawn 1 instances, now Total 45
+Counter: 46
+Batcher Size:35
+Preprocess the following candidate with BasicTester:
+Priority 7467
+At location src/tail.c:327
+--Src File: src/tail.c
+Fragment 0:
+emit_bug_reporting_address();
+return ((strcmp(f->name, "-") == 0) ? gettext("standard input") : f->name);
+
+
+BasicTester, a patch instance with id 12:
+Spawn 1 instances, now Total 46
+Counter: 47
+Batcher Size:36
+Preprocess the following candidate with BasicTester:
+Priority 7467
+At location src/tail.c:327
+--Src File: src/tail.c
+Fragment 0:
+error(1, (*__errno_location()), "-");
+return ((strcmp(f->name, "-") == 0) ? gettext("standard input") : f->name);
+
+
+BasicTester, a patch instance with id 13:
+Spawn 1 instances, now Total 47
+Counter: 48
+Batcher Size:37
+Preprocess the following candidate with BasicTester:
+Priority 7467
+At location src/tail.c:327
+--Src File: src/tail.c
+Fragment 0:
+forever = 0;
+return ((strcmp(f->name, "-") == 0) ? gettext("standard input") : f->name);
+
+
+BasicTester, a patch instance with id 14:
+Spawn 1 instances, now Total 48
+Counter: 49
+Batcher Size:38
+Preprocess the following candidate with BasicTester:
+Priority 7467
+At location src/tail.c:327
+--Src File: src/tail.c
+Fragment 0:
+error(0, 0, gettext("warning: PID ignored; --pid=PID is useful only when following"));
+return ((strcmp(f->name, "-") == 0) ? gettext("standard input") : f->name);
+
+
+BasicTester, a patch instance with id 15:
+Spawn 1 instances, now Total 49
+Counter: 50
+Batcher Size:39
+Preprocess the following candidate with BasicTester:
+Priority 7467
+At location src/tail.c:327
+--Src File: src/tail.c
+Fragment 0:
+error(0, 0, gettext("warning: following standard input indefinitely is ineffective"));
+return ((strcmp(f->name, "-") == 0) ? gettext("standard input") : f->name);
+
+
+BasicTester, a patch instance with id 16:
+Spawn 1 instances, now Total 50
+Counter: 51
+Batcher Size:40
+Preprocess the following candidate with BasicTester:
+Priority 7467
+At location src/tail.c:327
+--Src File: src/tail.c
+Fragment 0:
+follow_mode = Follow_name;
+return ((strcmp(f->name, "-") == 0) ? gettext("standard input") : f->name);
+
+
+BasicTester, a patch instance with id 17:
+Spawn 1 instances, now Total 51
+Counter: 52
+Batcher Size:41
+Preprocess the following candidate with BasicTester:
+Priority 7467
+At location src/tail.c:327
+--Src File: src/tail.c
+Fragment 0:
+follow_mode = Follow_descriptor;
+return ((strcmp(f->name, "-") == 0) ? gettext("standard input") : f->name);
+
+
+BasicTester, a patch instance with id 18:
+Spawn 1 instances, now Total 52
+Counter: 53
+Batcher Size:42
+Preprocess the following candidate with BasicTester:
+Priority 7467
+At location src/tail.c:327
+--Src File: src/tail.c
+Fragment 0:
+follow_mode = (Follow_descriptor);
+return ((strcmp(f->name, "-") == 0) ? gettext("standard input") : f->name);
+
+
+BasicTester, a patch instance with id 19:
+Spawn 1 instances, now Total 53
+a batched test job starts!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/srcMerged code building succ, going to invoke tester!
+BasicTester, Testing instance id 10:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+BasicTester, Testing instance id 11:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+BasicTester, Testing instance id 12:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+BasicTester, Testing instance id 13:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+BasicTester, Testing instance id 14:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+BasicTester, Testing instance id 15:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+BasicTester, Testing instance id 16:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+BasicTester, Testing instance id 17:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Passed Negative Cases with BasicTester
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 3  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 4  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 7  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 8  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 10  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 14  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 16  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 18  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 19  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 20  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 21  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 22  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 24  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 25  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 26  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 32  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 34  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 38  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 40  > __res
+Passed Positive Cases
+Passed!
+BasicTester, Testing instance id 18:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+BasicTester, Testing instance id 19:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Update best score 7466983.000000
+a batched test job starts!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/srcMerged code building succ, going to invoke tester!
+CondTester, Testing instance id 0:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+CondTester, Testing instance id 1:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+a batched test job starts!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/srcMerged code building succ, going to invoke tester!
+CondTester, Testing instance id 22:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+CondTester, Testing instance id 23:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+a batched test job starts!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/srcMerged code building succ, going to invoke tester!
+CondTester, Testing instance id 18:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+CondTester, Testing instance id 21:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+a batched test job starts!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/srcMerged code building failed! Going to build saperately!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/srcCondTester, Testing instance id 2:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/srcCondTester, Testing instance id 5:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+a batched test job starts!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/srcMerged code building succ, going to invoke tester!
+CondTester, Testing instance id 3:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+CondTester, Testing instance id 4:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+a batched test job starts!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/srcMerged code building succ, going to invoke tester!
+CondTester, Testing instance id 24:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+CondTester, Testing instance id 25:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+CondTester, Testing instance id 26:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+a batched test job starts!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/srcMerged code building succ, going to invoke tester!
+CondTester, Testing instance id 30:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+CondTester, Testing instance id 31:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+CondTester, Testing instance id 32:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+a batched test job starts!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/srcMerged code building succ, going to invoke tester!
+CondTester, Testing instance id 27:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+CondTester, Testing instance id 28:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+CondTester, Testing instance id 29:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+a batched test job starts!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/srcMerged code building succ, going to invoke tester!
+CondTester, Testing instance id 19:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+CondTester, Testing instance id 20:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+a batched test job starts!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/srcMerged code building succ, going to invoke tester!
+CondTester, Testing instance id 6:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+CondTester, Testing instance id 14:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+a batched test job starts!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/srcMerged code building succ, going to invoke tester!
+CondTester, Testing instance id 15:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+CondTester, Testing instance id 16:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+CondTester, Testing instance id 17:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+a batched test job starts!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/srcMerged code building succ, going to invoke tester!
+CondTester, Testing instance id 7:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+CondTester, Testing instance id 12:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+CondTester, Testing instance id 13:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+a batched test job starts!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/srcMerged code building succ, going to invoke tester!
+CondTester, Testing instance id 8:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+CondTester, Testing instance id 11:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+a batched test job starts!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/srcMerged code building succ, going to invoke tester!
+CondTester, Testing instance id 9:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Passed Negative Cases wiht CondTestder!
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 3  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 4  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 7  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 8  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 10  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 14  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 16  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 18  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 19  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 20  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 21  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 22  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 24  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 25  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 26  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 32  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 34  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 38  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 40  > __res
+Passed Positive Cases
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 3  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 4  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 7  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 8  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 10  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 14  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 16  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 18  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 19  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 20  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 21  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 22  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 24  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 25  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 26  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 32  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 34  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 38  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 40  > __res
+Passed!
+CondTester, Testing instance id 10:
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Strange error or non-deterministic behavior!
+CondTester, Postprocessing instance id 9:
+Trying a synthesis expr 1
+Skipping a synthesis:1
+Trying a synthesis expr print_headers == 0
+Skipping an unintialized variable synthesis:print_headers
+Trying a synthesis expr header_mode == 0
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/srcRunning test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Trying a synthesis expr have_read_stdin == 0
+Skipping an unintialized variable synthesis:have_read_stdin
+Trying a synthesis expr ok == 0
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/srcRunning test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Trying a synthesis expr from_start == 0
+Skipping an unintialized variable synthesis:from_start
+Trying a synthesis expr obsolete_option == 0
+Skipping an unintialized variable synthesis:obsolete_option
+Trying a synthesis expr forever == 1
+Skipping a synthesis expr :forever == 1: in origcond:(forever) && !__is_neg()
+Trying a synthesis expr n_files == 1
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/srcRunning test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Trying a synthesis expr i == 1
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/srcRunning test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Trying a synthesis expr follow_mode == 2
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/srcRunning test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Trying a synthesis expr argc == 5
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/srcRunning test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Trying a synthesis expr count_lines == 1
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/srcRunning test command:
+/home/ubuntu/spr-fast/tools/coreutils-test.py /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/src /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w/tests /home/ubuntu/spr-fast/tests/corebench/coreutils/coreutils-case-ae494d4b-d461bfd2/tempworkdir-w 0  > __res
+Skipping two clauses!(1) &&(0)
+Found a clause! (forever) 
+Skipping a clause! (forever) 
+Postprocessing failed!
+Total cnt of passed cond schemas: 1
+Total cnt of cond schemas: 33
+Counter: 54
+Batcher Size:0
+The found score 7466983.000000 is greater than current score 7467.000000!
+Terminate current session!
+Generated a patch at candidate schema no 51
+Total cnt of passed cond schemas: 1
+Total cnt of cond schemas: 33
+Candidate count:0!!
+Found a fix! Store to: coreutils-fix-ae494d4b-d461bfd2src_tail.c
+Antipattern stats END: earlyret => 130
+Antipattern stats END: errorexit => 14
+Antipattern stats END: singlecfg => 2
+Repair process ends successfully!
+Total 7108 different repair candidate schema!!!!
+Total number of compiles: 25
+Total number of test eval: 160

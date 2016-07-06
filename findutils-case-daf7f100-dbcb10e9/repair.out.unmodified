@@ -1,0 +1,3579 @@
+Initialize the program!
+Generating repair candidates!
+Processing find/parser.c
+In dir /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src
+BUILDDIR:
+BUILDCMD:/home/ubuntu/spr-fast/tools/findutils-build.py -p /home/ubuntu/spr-fast/benchmarks/findutils-deps -c -d find/parser.c /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src __args >>/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/build.log 2>&1
+going to directory /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src/find
+In file included from <built-in>:312:
+<command line>:2:20: warning: missing terminating '"' character [-Winvalid-pp-token]
+#define LOCALEDIR \"/usr/local/share/locale\"
+                   ^
+In file included from find/parser.c:24:
+In file included from /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src/find/defs.h:58:
+In file included from ../gnulib/lib/inttypes.h:26:
+/usr/include/inttypes.h:290:8: error: unknown type name 'intmax_t'
+extern intmax_t imaxabs (intmax_t __n) __THROW __attribute__ ((__const__));
+       ^
+/usr/include/inttypes.h:290:26: error: unknown type name 'intmax_t'
+extern intmax_t imaxabs (intmax_t __n) __THROW __attribute__ ((__const__));
+                         ^
+/usr/include/inttypes.h:293:27: error: unknown type name 'intmax_t'
+extern imaxdiv_t imaxdiv (intmax_t __numer, intmax_t __denom)
+                          ^
+/usr/include/inttypes.h:293:45: error: unknown type name 'intmax_t'
+extern imaxdiv_t imaxdiv (intmax_t __numer, intmax_t __denom)
+                                            ^
+/usr/include/inttypes.h:297:8: error: unknown type name 'intmax_t'
+extern intmax_t strtoimax (const char *__restrict __nptr,
+       ^
+/usr/include/inttypes.h:301:8: error: unknown type name 'uintmax_t'
+extern uintmax_t strtoumax (const char *__restrict __nptr,
+       ^
+/usr/include/inttypes.h:305:8: error: unknown type name 'intmax_t'
+extern intmax_t wcstoimax (const __gwchar_t *__restrict __nptr,
+       ^
+/usr/include/inttypes.h:310:8: error: unknown type name 'uintmax_t'
+extern uintmax_t wcstoumax (const __gwchar_t *__restrict __nptr,
+       ^
+/usr/include/inttypes.h:323:17: error: unknown type name 'intmax_t'
+__extern_inline intmax_t
+                ^
+/usr/include/inttypes.h:324:1: error: expected identifier or '('
+__NTH (strtoimax (const char *__restrict nptr, char **__restrict endptr,
+^
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:57:22: note: expanded from macro '__NTH'
+#  define __NTH(fct)    __attribute__ ((__nothrow__ __LEAF)) fct
+                        ^
+In file included from find/parser.c:24:
+In file included from /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src/find/defs.h:58:
+In file included from ../gnulib/lib/inttypes.h:26:
+/usr/include/inttypes.h:335:17: error: unknown type name 'uintmax_t'
+__extern_inline uintmax_t
+                ^
+/usr/include/inttypes.h:336:1: error: expected identifier or '('
+__NTH (strtoumax (const char *__restrict nptr, char **__restrict endptr,
+^
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:57:22: note: expanded from macro '__NTH'
+#  define __NTH(fct)    __attribute__ ((__nothrow__ __LEAF)) fct
+                        ^
+In file included from find/parser.c:24:
+In file included from /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src/find/defs.h:58:
+In file included from ../gnulib/lib/inttypes.h:26:
+/usr/include/inttypes.h:347:17: error: unknown type name 'intmax_t'
+__extern_inline intmax_t
+                ^
+/usr/include/inttypes.h:348:1: error: expected identifier or '('
+__NTH (wcstoimax (const __gwchar_t *__restrict nptr,
+^
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:57:22: note: expanded from macro '__NTH'
+#  define __NTH(fct)    __attribute__ ((__nothrow__ __LEAF)) fct
+                        ^
+In file included from find/parser.c:24:
+In file included from /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src/find/defs.h:58:
+In file included from ../gnulib/lib/inttypes.h:26:
+/usr/include/inttypes.h:361:17: error: unknown type name 'uintmax_t'
+__extern_inline uintmax_t
+                ^
+/usr/include/inttypes.h:362:1: error: expected identifier or '('
+__NTH (wcstoumax (const __gwchar_t *__restrict nptr,
+^
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:57:22: note: expanded from macro '__NTH'
+#  define __NTH(fct)    __attribute__ ((__nothrow__ __LEAF)) fct
+                        ^
+In file included from find/parser.c:24:
+In file included from /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src/find/defs.h:58:
+../gnulib/lib/inttypes.h:47:3: error: "This file assumes that 'int' has exactly 32 bits. Please report your platform and compiler to <bug-gnulib@gnu.org>."
+# error "This file assumes that 'int' has exactly 32 bits. Please report your platform and compiler to <bug-gnulib@gnu.org>."
+  ^
+In file included from find/parser.c:24:
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src/find/defs.h:143:3: error: unknown type name 'uintmax_t'
+  uintmax_t l_val;
+  ^
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src/find/defs.h:173:3: error: unknown type name 'uintmax_t'
+  uintmax_t size;
+  ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+Total 4755 different repair candidate templates!!!!
+Total 4755 different repair candidate templates!!!!
+Total 5582 different repair candidate!!!
+Trying different candidates!
+BasicTester pointer: 0x1ffa010
+CondTester pointer: 0x24fd4c0
+Counter: 1
+Batcher Size:0
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+if ((options.debug_options & DebugStat) && !(__abst_hole(options.debug_options, options.debug_options, options.xstat, options.xstat, opt, options.no_leaf_check, options.no_leaf_check, options.symlink_handling, options.symlink_handling, options.do_dir_first, options.maxdepth, options.mindepth, options.stay_on_filesystem, options.ignore_readdir_race, options.literal_control_chars, options.warnings, options.cur_day_start, options.full_days, options.output_block_size, options.open_nofollow_available, options.regex_options, options.optimisation_level, options.err_quoting_style, options.do_dir_first, options.maxdepth, options.mindepth, options.stay_on_filesystem, options.ignore_readdir_race, options.literal_control_chars, options.warnings, options.cur_day_start, options.full_days, options.output_block_size, options.open_nofollow_available, options.regex_options, options.optimisation_level, options.err_quoting_style))) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+CondTester, a patch instance with id 0:
+Spawn 1 instances, now Total 1
+Counter: 2
+Batcher Size:1
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+if ((options.debug_options & DebugStat) || (__abst_hole(options.debug_options, options.debug_options, options.xstat, options.xstat, opt, options.no_leaf_check, options.no_leaf_check, options.symlink_handling, options.symlink_handling, options.do_dir_first, options.maxdepth, options.mindepth, options.stay_on_filesystem, options.ignore_readdir_race, options.literal_control_chars, options.warnings, options.cur_day_start, options.full_days, options.output_block_size, options.open_nofollow_available, options.regex_options, options.optimisation_level, options.err_quoting_style, options.do_dir_first, options.maxdepth, options.mindepth, options.stay_on_filesystem, options.ignore_readdir_race, options.literal_control_chars, options.warnings, options.cur_day_start, options.full_days, options.output_block_size, options.open_nofollow_available, options.regex_options, options.optimisation_level, options.err_quoting_style))) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+CondTester, a patch instance with id 1:
+Spawn 1 instances, now Total 2
+Counter: 3
+Batcher Size:2
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location find/parser.c:2662
+--Src File: find/parser.c
+Fragment 0:
+{
+    if ((scan[1] == '%') && !(__abst_hole(scan, format, segmentp, our_pred, scan2, entry, func, format_const))) {
+        segmentp = make_segment(segmentp, format, scan - format + 1, KIND_PLAIN, 0, 0, our_pred);
+        scan++;
+        format = scan + 1;
+        continue;
+    }
+}
+
+
+CondTester, a patch instance with id 2:
+Spawn 1 instances, now Total 3
+Counter: 4
+Batcher Size:3
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location find/parser.c:2676
+--Src File: find/parser.c
+Fragment 0:
+if ((*scan2 == '.') && !(__abst_hole(scan2, scan, format, segmentp, our_pred, entry, func, format_const)))
+    for (scan2++; (1 && ((*__ctype_b_loc())[(int)(((unsigned char)*scan2))] & (unsigned short)_ISdigit)); scan2++) 
+        ;
+
+
+CondTester, a patch instance with id 3:
+Spawn 1 instances, now Total 4
+Counter: 5
+Batcher Size:4
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location find/parser.c:2662
+--Src File: find/parser.c
+Fragment 0:
+{
+    if ((scan[1] == '%') || (__abst_hole(scan, format, segmentp, our_pred, scan2, entry, func, format_const))) {
+        segmentp = make_segment(segmentp, format, scan - format + 1, KIND_PLAIN, 0, 0, our_pred);
+        scan++;
+        format = scan + 1;
+        continue;
+    }
+}
+
+
+CondTester, a patch instance with id 4:
+Spawn 1 instances, now Total 5
+Counter: 6
+Batcher Size:5
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location find/parser.c:3196
+--Src File: find/parser.c
+Fragment 0:
+if ((COMP_LT == tval.kind) && !(__abst_hole(tval.kind, origin, comp, timearg, orig_timearg, argv, arg_ptr, errmsg, entry, our_pred, tval.xval))) {
+    origin += (86400 - 1);
+}
+
+
+CondTester, a patch instance with id 5:
+Spawn 1 instances, now Total 6
+Counter: 7
+Batcher Size:6
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location find/parser.c:3196
+--Src File: find/parser.c
+Fragment 0:
+if ((COMP_LT == tval.kind) || (__abst_hole(tval.kind, origin, comp, timearg, orig_timearg, argv, arg_ptr, errmsg, entry, our_pred, tval.xval))) {
+    origin += (86400 - 1);
+}
+
+
+CondTester, a patch instance with id 6:
+Spawn 1 instances, now Total 7
+Counter: 8
+Batcher Size:7
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location find/parser.c:3191
+--Src File: find/parser.c
+Fragment 0:
+if ((get_comp_type(&timearg, &comp)) && !(__abst_hole(comp, timearg, origin, orig_timearg, argv, arg_ptr, errmsg, entry, our_pred))) {
+    if (COMP_LT == tval.kind) {
+        origin += (86400 - 1);
+    }
+}
+
+
+CondTester, a patch instance with id 7:
+Spawn 1 instances, now Total 8
+Counter: 9
+Batcher Size:8
+Preprocess the following candidate with CondTester:
+Priority 20000
+At location find/parser.c:2657
+--Src File: find/parser.c
+Fragment 0:
+if ((scan[1] == 0) || (__abst_hole(scan, scan2, format, our_pred, segmentp, entry, func, format_const))) {
+    error(1, 0, dcgettext(((void *)0), "error: %s at end of format string", 5), scan);
+} else if (scan[1] == '%') {
+    segmentp = make_segment(segmentp, format, scan - format + 1, KIND_PLAIN, 0, 0, our_pred);
+    scan++;
+    format = scan + 1;
+    continue;
+}
+
+
+CondTester, a patch instance with id 8:
+Spawn 1 instances, now Total 9
+Counter: 10
+Batcher Size:9
+Preprocess the following candidate with CondTester:
+Priority 10302
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+if ((__abst_hole(options.debug_options, options.debug_options, options.xstat, options.xstat, opt, options.no_leaf_check, options.no_leaf_check, options.symlink_handling, options.symlink_handling, options.do_dir_first, options.maxdepth, options.mindepth, options.stay_on_filesystem, options.ignore_readdir_race, options.literal_control_chars, options.warnings, options.cur_day_start, options.full_days, options.output_block_size, options.open_nofollow_available, options.regex_options, options.optimisation_level, options.err_quoting_style, options.do_dir_first, options.maxdepth, options.mindepth, options.stay_on_filesystem, options.ignore_readdir_race, options.literal_control_chars, options.warnings, options.cur_day_start, options.full_days, options.output_block_size, options.open_nofollow_available, options.regex_options, options.optimisation_level, options.err_quoting_style)))
+    return;
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+CondTester, a patch instance with id 9:
+Spawn 1 instances, now Total 10
+Counter: 11
+Batcher Size:10
+Preprocess the following candidate with CondTester:
+Priority 9037
+At location find/parser.c:2699
+--Src File: find/parser.c
+Fragment 0:
+if ((__abst_hole(scan2, format, scan, segmentp, our_pred, entry, func, format_const)))
+    break;
+error(0, 0, dcgettext(((void *)0), "warning: unrecognized format directive `%%%c'", 5), *scan2);
+
+
+CondTester, a patch instance with id 10:
+Spawn 1 instances, now Total 11
+Counter: 12
+Batcher Size:11
+Preprocess the following candidate with CondTester:
+Priority 9032
+At location find/parser.c:2689
+--Src File: find/parser.c
+Fragment 0:
+if ((__abst_hole(format, scan2, segmentp, our_pred, scan, entry, func, format_const)))
+    break;
+segmentp = make_segment(segmentp, format, scan2 - format, KIND_FORMAT, scan2[0], scan2[1], our_pred);
+
+
+CondTester, a patch instance with id 11:
+Spawn 1 instances, now Total 12
+Counter: 13
+Batcher Size:12
+Preprocess the following candidate with CondTester:
+Priority 9000
+At location find/parser.c:2760
+--Src File: find/parser.c
+Fragment 0:
+if ((__abst_hole(pred, pred->need_stat, format_char, mycost, kind, fmt, segment, pred->need_type, pred->p_cost, aux_format_char, len, format, pred->pred_func, pred->p_name, pred->p_type, pred->p_prec, pred->side_effects, pred->no_default_print, pred->literal_control_chars, pred->artificial, pred->arg_text, pred->pred_next, pred->pred_left, pred->pred_right, pred->parser_entry)))
+    return 0;
+case 'l':
+pred->need_stat = 1;
+
+
+CondTester, a patch instance with id 12:
+Spawn 1 instances, now Total 13
+Counter: 14
+Batcher Size:13
+Preprocess the following candidate with CondTester:
+Priority 8989
+At location find/parser.c:2664
+--Src File: find/parser.c
+Fragment 0:
+if ((__abst_hole(format, scan, segmentp, our_pred, scan2, entry, func, format_const)))
+    break;
+segmentp = make_segment(segmentp, format, scan - format + 1, KIND_PLAIN, 0, 0, our_pred);
+
+
+CondTester, a patch instance with id 13:
+Spawn 1 instances, now Total 14
+Counter: 15
+Batcher Size:14
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+(*__errno_location()) = (0);
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 0:
+Spawn 1 instances, now Total 15
+Counter: 16
+Batcher Size:15
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+puts(dcgettext(((void *)0), "actions: -delete -print0 -printf FORMAT -fprintf FILE FORMAT -print \n      -fprint0 FILE -fprint FILE -ls -fls FILE -prune -quit\n      -exec COMMAND ; -exec COMMAND {} + -ok COMMAND ;\n      -execdir COMMAND ; -execdir COMMAND {} + -okdir COMMAND ;\n", 5));
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 1:
+Spawn 1 instances, now Total 16
+Counter: 17
+Batcher Size:16
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+puts(dcgettext(((void *)0), "positional options (always true): -daystart -follow -regextype\n\nnormal options (always true, specified before other expressions):\n      -depth --help -maxdepth LEVELS -mindepth LEVELS -mount -noleaf\n      --version -xdev -ignore_readdir_race -noignore_readdir_race\n", 5));
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 2:
+Spawn 1 instances, now Total 17
+Counter: 18
+Batcher Size:17
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+xalloc_die();
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 3:
+Spawn 1 instances, now Total 18
+Counter: 19
+Batcher Size:18
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+puts(dcgettext(((void *)0), "operators (decreasing precedence; -and is implicit where no others are given):\n      ( EXPR )   ! EXPR   -not EXPR   EXPR1 -a EXPR2   EXPR1 -and EXPR2\n      EXPR1 -o EXPR2   EXPR1 -or EXPR2   EXPR1 , EXPR2\n", 5));
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 4:
+Spawn 1 instances, now Total 19
+Counter: 20
+Batcher Size:19
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+set_follow_state((SYMLINK_ALWAYS_DEREF));
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 5:
+Spawn 1 instances, now Total 20
+Counter: 21
+Batcher Size:20
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+set_follow_state((SYMLINK_NEVER_DEREF));
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 6:
+Spawn 1 instances, now Total 21
+a batched test job starts!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/srcMerged code building succ, going to invoke tester!
+CondTester, Testing instance id 0:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+CondTester, Testing instance id 1:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+debug_stat (2016-01-14)
+debug_stat (2016-01-16)
+debug_stat (2016-01-17)
+debug_stat (2016-01-15)
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+debug_stat (2016-01-14)
+debug_stat (2016-01-16)
+debug_stat (2016-01-17)
+debug_stat (2016-01-15)
+CondTester, Testing instance id 9:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+Segmentation fault
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+Segmentation fault
+BasicTester, Testing instance id 0:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 1:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 2:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 3:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src/find/find: memory exhausted
+BasicTester, Testing instance id 4:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 5:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+Segmentation fault
+BasicTester, Testing instance id 6:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+Segmentation fault
+Counter: 22
+Batcher Size:11
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+set_follow_state(SYMLINK_ALWAYS_DEREF);
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 7:
+Spawn 1 instances, now Total 22
+Counter: 23
+Batcher Size:12
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+set_follow_state((SYMLINK_DEREF_ARGSONLY));
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 8:
+Spawn 1 instances, now Total 23
+Counter: 24
+Batcher Size:13
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+puts(dcgettext(((void *)0), "tests (N can be +N or -N or N): -amin N -anewer FILE -atime N -cmin N\n      -cnewer FILE -ctime N -empty -false -fstype TYPE -gid N -group NAME\n      -ilname PATTERN -iname PATTERN -inum N -iwholename PATTERN -iregex PATTERN\n      -links N -lname PATTERN -mmin N -mtime N -name PATTERN -newer FILE", 5));
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 9:
+Spawn 1 instances, now Total 24
+Counter: 25
+Batcher Size:14
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+options.xstat = debug_stat;
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 10:
+Spawn 1 instances, now Total 25
+Counter: 26
+Batcher Size:15
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+printf("O_NOFOLLOW(%s) ", (options.open_nofollow_available ? "enabled" : "disabled"));
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 11:
+Spawn 1 instances, now Total 26
+Counter: 27
+Batcher Size:16
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+printf(dcgettext(((void *)0), "Features enabled: ", 5));
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 12:
+Spawn 1 instances, now Total 27
+Counter: 28
+Batcher Size:17
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+puts(dcgettext(((void *)0), "Report (and track progress on fixing) bugs via the findutils bug-reporting\npage at http://savannah.gnu.org/ or, if you have no web access, by sending\nemail to <bug-findutils@gnu.org>.", 5));
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 13:
+Spawn 1 instances, now Total 28
+Counter: 29
+Batcher Size:18
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+puts(dcgettext(((void *)0), "\ndefault path is the current directory; default expression is -print\nexpression may consist of: operators, options, tests, and actions:\n", 5));
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 14:
+Spawn 1 instances, now Total 29
+Counter: 30
+Batcher Size:19
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+puts(dcgettext(((void *)0), "      -nouser -nogroup -path PATTERN -perm [+-]MODE -regex PATTERN\n      -readable -writable -executable\n      -wholename PATTERN -size N[bcwkMG] -true -type [bcdpflsD] -uid N\n      -used N -user NAME -xtype [bcdpfls]\n", 5));
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 15:
+Spawn 1 instances, now Total 30
+Counter: 31
+Batcher Size:20
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+printf("\n");
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 16:
+Spawn 1 instances, now Total 31
+a batched test job starts!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/srcMerged code building succ, going to invoke tester!
+BasicTester, Testing instance id 7:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+Segmentation fault
+BasicTester, Testing instance id 8:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+Segmentation fault
+BasicTester, Testing instance id 9:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 10:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 11:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 12:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 13:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 14:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 15:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 16:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+Counter: 32
+Batcher Size:11
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+printf("none");
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 17:
+Spawn 1 instances, now Total 32
+Counter: 33
+Batcher Size:12
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+printf(dcgettext(((void *)0), "Built using GNU gnulib version %s\n", 5), gnulib_version);
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 18:
+Spawn 1 instances, now Total 33
+Counter: 34
+Batcher Size:13
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+printf(") ");
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 19:
+Spawn 1 instances, now Total 34
+Counter: 35
+Batcher Size:14
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+printf("D_TYPE ");
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 20:
+Spawn 1 instances, now Total 35
+Counter: 36
+Batcher Size:15
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+printf("FTS_CWDFD");
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 21:
+Spawn 1 instances, now Total 36
+Counter: 37
+Batcher Size:16
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+printf("LEAF_OPTIMISATION ");
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 22:
+Spawn 1 instances, now Total 37
+Counter: 38
+Batcher Size:17
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+printf("FTS(");
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 23:
+Spawn 1 instances, now Total 38
+Counter: 39
+Batcher Size:18
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+printf(",");
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 24:
+Spawn 1 instances, now Total 39
+Counter: 40
+Batcher Size:19
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+printf("CBO(level=%d) ", (int)(options.optimisation_level));
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 25:
+Spawn 1 instances, now Total 40
+Counter: 41
+Batcher Size:20
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+options.symlink_handling = (opt);
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 26:
+Spawn 1 instances, now Total 41
+a batched test job starts!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/srcMerged code building succ, going to invoke tester!
+BasicTester, Testing instance id 17:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 18:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 19:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 20:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 21:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 22:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 23:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 24:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 25:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 26:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+Counter: 42
+Batcher Size:11
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+options.warnings = 0;
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 27:
+Spawn 1 instances, now Total 42
+Counter: 43
+Batcher Size:12
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+options.warnings = 1;
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 28:
+Spawn 1 instances, now Total 43
+Counter: 44
+Batcher Size:13
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+options.symlink_handling = opt;
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 29:
+Spawn 1 instances, now Total 44
+Counter: 45
+Batcher Size:14
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+if (0 != fnmatch("foo", "foo", 0) || 0 == fnmatch("Foo", "foo", 0) || 0 != fnmatch("Foo", "foo", (1 << 4))) {
+    error(1, 0, dcgettext(((void *)0), "sanity check of the fnmatch() library function failed.", 5));
+    return 0;
+}
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 30:
+Spawn 1 instances, now Total 45
+Counter: 46
+Batcher Size:15
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+options.symlink_handling = (0);
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 31:
+Spawn 1 instances, now Total 46
+Counter: 47
+Batcher Size:16
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+options.symlink_handling = (1);
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 32:
+Spawn 1 instances, now Total 47
+Counter: 48
+Batcher Size:17
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+if (options.warnings) {
+    error(0, 0, dcgettext(((void *)0), "warning: the -d option is deprecated; please use -depth instead, because the latter is a POSIX-compliant feature.", 5));
+}
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 33:
+Spawn 1 instances, now Total 48
+Counter: 49
+Batcher Size:18
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+options.regex_options = (1);
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 34:
+Spawn 1 instances, now Total 49
+Counter: 50
+Batcher Size:19
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+options.stay_on_filesystem = 1;
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 35:
+Spawn 1 instances, now Total 50
+Counter: 51
+Batcher Size:20
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+options.do_dir_first = 0;
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 36:
+Spawn 1 instances, now Total 51
+a batched test job starts!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/srcMerged code building succ, going to invoke tester!
+BasicTester, Testing instance id 27:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 28:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 29:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 30:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 31:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 32:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 33:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src/find/find: warning: the -d option is deprecated; please use -depth instead, because the latter is a POSIX-compliant feature.
+BasicTester, Testing instance id 34:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 35:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 36:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+Counter: 52
+Batcher Size:11
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+options.ignore_readdir_race = 0;
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 37:
+Spawn 1 instances, now Total 52
+Counter: 53
+Batcher Size:12
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+options.no_leaf_check = 1;
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 38:
+Spawn 1 instances, now Total 53
+Counter: 54
+Batcher Size:13
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+options.regex_options = (0);
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 39:
+Spawn 1 instances, now Total 54
+Counter: 55
+Batcher Size:14
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+options.ignore_readdir_race = 1;
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 40:
+Spawn 1 instances, now Total 55
+Counter: 56
+Batcher Size:15
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+options.full_days = 1;
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 41:
+Spawn 1 instances, now Total 56
+Counter: 57
+Batcher Size:16
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+(*__errno_location()) = 34;
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 42:
+Spawn 1 instances, now Total 57
+Counter: 58
+Batcher Size:17
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+error(1, 0, dcgettext(((void *)0), "Arguments to -type should contain only one letter", 5));
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 43:
+Spawn 1 instances, now Total 58
+Counter: 59
+Batcher Size:18
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+error(1, 0, dcgettext(((void *)0), "sanity check of the fnmatch() library function failed.", 5));
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 44:
+Spawn 1 instances, now Total 59
+Counter: 60
+Batcher Size:19
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+first_nonoption_arg = ((void *)0);
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 45:
+Spawn 1 instances, now Total 60
+Counter: 61
+Batcher Size:20
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+fnmatch_sanitycheck();
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 46:
+Spawn 1 instances, now Total 61
+a batched test job starts!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/srcMerged code building failed! Going to build saperately!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/srcBasicTester, Testing instance id 37:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/srcBasicTester, Testing instance id 38:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/srcBasicTester, Testing instance id 39:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/srcBasicTester, Testing instance id 40:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/srcBasicTester, Testing instance id 41:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/srcBasicTester, Testing instance id 42:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/srcBasicTester, Testing instance id 43:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src/find/find: Arguments to -type should contain only one letter
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/srcBasicTester, Testing instance id 44:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src/find/find: sanity check of the fnmatch() library function failed.
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/srcBasicTester, Testing instance id 45:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/srcSingle building for Tester 0x1ffa010 id 46 failed as well!
+Counter: 62
+Batcher Size:11
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+exit(0);
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 47:
+Spawn 1 instances, now Total 62
+Counter: 63
+Batcher Size:12
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+error(1, 0, dcgettext(((void *)0), "You may not use {} within the utility name for -execdir and -okdir, because this is a potential security problem.", 5));
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 48:
+Spawn 1 instances, now Total 63
+Counter: 64
+Batcher Size:13
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+error(1, 0, dcgettext(((void *)0), "argument to -group is empty, but should be a group name", 5));
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 49:
+Spawn 1 instances, now Total 64
+Counter: 65
+Batcher Size:14
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+error(1, 0, dcgettext(((void *)0), "invalid null argument to -size", 5));
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 50:
+Spawn 1 instances, now Total 65
+Counter: 66
+Batcher Size:15
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+abort();
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 51:
+Spawn 1 instances, now Total 66
+Counter: 67
+Batcher Size:16
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+endpwent();
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 52:
+Spawn 1 instances, now Total 67
+Counter: 68
+Batcher Size:17
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+error(0, 0, dcgettext(((void *)0), "warning: the -d option is deprecated; please use -depth instead, because the latter is a POSIX-compliant feature.", 5));
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 53:
+Spawn 1 instances, now Total 68
+Counter: 69
+Batcher Size:18
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+error(0, 0, dcgettext(((void *)0), "warning: the predicate -ipath is deprecated; please use -iwholename instead.", 5));
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 54:
+Spawn 1 instances, now Total 69
+Counter: 70
+Batcher Size:19
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+error(0, 0, dcgettext(((void *)0), "This system does not provide a way to find the birth time of a file.", 5));
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 55:
+Spawn 1 instances, now Total 70
+Counter: 71
+Batcher Size:20
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+endgrent();
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 56:
+Spawn 1 instances, now Total 71
+a batched test job starts!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/srcMerged code building succ, going to invoke tester!
+BasicTester, Testing instance id 47:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 48:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src/find/find: You may not use {} within the utility name for -execdir and -okdir, because this is a potential security problem.
+BasicTester, Testing instance id 49:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src/find/find: argument to -group is empty, but should be a group name
+BasicTester, Testing instance id 50:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src/find/find: invalid null argument to -size
+BasicTester, Testing instance id 51:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+Aborted
+BasicTester, Testing instance id 52:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 53:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src/find/find: warning: the -d option is deprecated; please use -depth instead, because the latter is a POSIX-compliant feature.
+BasicTester, Testing instance id 54:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src/find/find: warning: the predicate -ipath is deprecated; please use -iwholename instead.
+BasicTester, Testing instance id 55:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src/find/find: This system does not provide a way to find the birth time of a file.
+BasicTester, Testing instance id 56:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+Counter: 72
+Batcher Size:11
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+((131072 != 0) ? (void)(0) : __assert_fail("0400000 != 0", "find/parser.c", 2077, __PRETTY_FUNCTION__));
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 57:
+Spawn 1 instances, now Total 72
+Counter: 73
+Batcher Size:12
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+(*__errno_location()) = (1);
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 58:
+Spawn 1 instances, now Total 73
+Counter: 74
+Batcher Size:13
+Preprocess the following candidate with BasicTester:
+Priority 6552
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+(*__errno_location()) = 0;
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 59:
+Spawn 1 instances, now Total 74
+Counter: 75
+Batcher Size:14
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+first_nonoption_arg = ((void *)0);
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 60:
+Spawn 1 instances, now Total 75
+Counter: 76
+Batcher Size:15
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+printf(") ");
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 61:
+Spawn 1 instances, now Total 76
+Counter: 77
+Batcher Size:16
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+printf("\n");
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 62:
+Spawn 1 instances, now Total 77
+Counter: 78
+Batcher Size:17
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+puts(dcgettext(((void *)0), "      -nouser -nogroup -path PATTERN -perm [+-]MODE -regex PATTERN\n      -readable -writable -executable\n      -wholename PATTERN -size N[bcwkMG] -true -type [bcdpflsD] -uid N\n      -used N -user NAME -xtype [bcdpfls]\n", 5));
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 63:
+Spawn 1 instances, now Total 78
+Counter: 79
+Batcher Size:18
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+puts(dcgettext(((void *)0), "\ndefault path is the current directory; default expression is -print\nexpression may consist of: operators, options, tests, and actions:\n", 5));
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 64:
+Spawn 1 instances, now Total 79
+Counter: 80
+Batcher Size:19
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+puts(dcgettext(((void *)0), "actions: -delete -print0 -printf FORMAT -fprintf FILE FORMAT -print \n      -fprint0 FILE -fprint FILE -ls -fls FILE -prune -quit\n      -exec COMMAND ; -exec COMMAND {} + -ok COMMAND ;\n      -execdir COMMAND ; -execdir COMMAND {} + -okdir COMMAND ;\n", 5));
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 65:
+Spawn 1 instances, now Total 80
+Counter: 81
+Batcher Size:20
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+puts(dcgettext(((void *)0), "Report (and track progress on fixing) bugs via the findutils bug-reporting\npage at http://savannah.gnu.org/ or, if you have no web access, by sending\nemail to <bug-findutils@gnu.org>.", 5));
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 66:
+Spawn 1 instances, now Total 81
+Counter: 82
+Batcher Size:21
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+printf("none");
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 67:
+Spawn 1 instances, now Total 82
+Counter: 83
+Batcher Size:22
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+printf(dcgettext(((void *)0), "Built using GNU gnulib version %s\n", 5), gnulib_version);
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 68:
+Spawn 1 instances, now Total 83
+Counter: 84
+Batcher Size:23
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+printf(dcgettext(((void *)0), "Features enabled: ", 5));
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 69:
+Spawn 1 instances, now Total 84
+a batched test job starts!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/srcMerged code building succ, going to invoke tester!
+BasicTester, Testing instance id 60:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 61:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 62:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 63:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 64:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 65:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 66:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 67:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 68:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 69:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+Counter: 85
+Batcher Size:14
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+printf(",");
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 70:
+Spawn 1 instances, now Total 85
+Counter: 86
+Batcher Size:15
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+printf("FTS(");
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 71:
+Spawn 1 instances, now Total 86
+Counter: 87
+Batcher Size:16
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+printf("LEAF_OPTIMISATION ");
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 72:
+Spawn 1 instances, now Total 87
+Counter: 88
+Batcher Size:17
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+printf("O_NOFOLLOW(%s) ", (options.open_nofollow_available ? "enabled" : "disabled"));
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 73:
+Spawn 1 instances, now Total 88
+Counter: 89
+Batcher Size:18
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+printf("FTS_CWDFD");
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 74:
+Spawn 1 instances, now Total 89
+Counter: 90
+Batcher Size:19
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+printf("CBO(level=%d) ", (int)(options.optimisation_level));
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 75:
+Spawn 1 instances, now Total 90
+Counter: 91
+Batcher Size:20
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+printf("D_TYPE ");
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 76:
+Spawn 1 instances, now Total 91
+Counter: 92
+Batcher Size:21
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+fnmatch_sanitycheck();
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 77:
+Spawn 1 instances, now Total 92
+Counter: 93
+Batcher Size:22
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+options.ignore_readdir_race = 1;
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 78:
+Spawn 1 instances, now Total 93
+Counter: 94
+Batcher Size:23
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+options.symlink_handling = (0);
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 79:
+Spawn 1 instances, now Total 94
+a batched test job starts!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/srcMerged code building succ, going to invoke tester!
+BasicTester, Testing instance id 70:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 71:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 72:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 73:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 74:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 75:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 76:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 77:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 78:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 79:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+Counter: 95
+Batcher Size:14
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+options.warnings = 1;
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 80:
+Spawn 1 instances, now Total 95
+Counter: 96
+Batcher Size:15
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+options.xstat = debug_stat;
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 81:
+Spawn 1 instances, now Total 96
+Counter: 97
+Batcher Size:16
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+options.warnings = 0;
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 82:
+Spawn 1 instances, now Total 97
+Counter: 98
+Batcher Size:17
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+options.no_leaf_check = 1;
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 83:
+Spawn 1 instances, now Total 98
+Counter: 99
+Batcher Size:18
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+options.regex_options = (0);
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 84:
+Spawn 1 instances, now Total 99
+Counter: 100
+Batcher Size:19
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+options.stay_on_filesystem = 1;
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 85:
+Spawn 1 instances, now Total 100
+Counter: 101
+Batcher Size:20
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+if (0 != fnmatch("foo", "foo", 0) || 0 == fnmatch("Foo", "foo", 0) || 0 != fnmatch("Foo", "foo", (1 << 4))) {
+    error(1, 0, dcgettext(((void *)0), "sanity check of the fnmatch() library function failed.", 5));
+    return 0;
+}
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 86:
+Spawn 1 instances, now Total 101
+Counter: 102
+Batcher Size:21
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+noop = (entry);
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 87:
+Spawn 1 instances, now Total 102
+Counter: 103
+Batcher Size:22
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+options.full_days = 1;
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 88:
+Spawn 1 instances, now Total 103
+Counter: 104
+Batcher Size:23
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+options.ignore_readdir_race = 0;
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 89:
+Spawn 1 instances, now Total 104
+a batched test job starts!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/srcMerged code building succ, going to invoke tester!
+BasicTester, Testing instance id 80:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 81:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 82:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 83:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 84:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 85:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 86:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 87:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 88:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 89:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+Counter: 105
+Batcher Size:14
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+options.do_dir_first = 0;
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 90:
+Spawn 1 instances, now Total 105
+Counter: 106
+Batcher Size:15
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+if (options.warnings) {
+    error(0, 0, dcgettext(((void *)0), "warning: the -d option is deprecated; please use -depth instead, because the latter is a POSIX-compliant feature.", 5));
+}
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 91:
+Spawn 1 instances, now Total 106
+Counter: 107
+Batcher Size:16
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+((131072 != 0) ? (void)(0) : __assert_fail("0400000 != 0", "find/parser.c", 2077, __PRETTY_FUNCTION__));
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 92:
+Spawn 1 instances, now Total 107
+Counter: 108
+Batcher Size:17
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+(*__errno_location()) = (0);
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 93:
+Spawn 1 instances, now Total 108
+Counter: 109
+Batcher Size:18
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+error(0, 0, dcgettext(((void *)0), "warning: the -d option is deprecated; please use -depth instead, because the latter is a POSIX-compliant feature.", 5));
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 94:
+Spawn 1 instances, now Total 109
+Counter: 110
+Batcher Size:19
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+error(1, 0, dcgettext(((void *)0), "argument to -group is empty, but should be a group name", 5));
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 95:
+Spawn 1 instances, now Total 110
+Counter: 111
+Batcher Size:20
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+error(1, 0, dcgettext(((void *)0), "sanity check of the fnmatch() library function failed.", 5));
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 96:
+Spawn 1 instances, now Total 111
+Counter: 112
+Batcher Size:21
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+exit(0);
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 97:
+Spawn 1 instances, now Total 112
+Counter: 113
+Batcher Size:22
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+error(1, 0, dcgettext(((void *)0), "invalid null argument to -size", 5));
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 98:
+Spawn 1 instances, now Total 113
+Counter: 114
+Batcher Size:23
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+error(0, 0, dcgettext(((void *)0), "warning: the predicate -ipath is deprecated; please use -iwholename instead.", 5));
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 99:
+Spawn 1 instances, now Total 114
+a batched test job starts!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/srcMerged code building succ, going to invoke tester!
+BasicTester, Testing instance id 90:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 91:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 92:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 93:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 94:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 95:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 96:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 97:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 98:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 99:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+Counter: 115
+Batcher Size:14
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+error(1, 0, dcgettext(((void *)0), "Arguments to -type should contain only one letter", 5));
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 100:
+Spawn 1 instances, now Total 115
+Counter: 116
+Batcher Size:15
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+error(1, 0, dcgettext(((void *)0), "You may not use {} within the utility name for -execdir and -okdir, because this is a potential security problem.", 5));
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 101:
+Spawn 1 instances, now Total 116
+Counter: 117
+Batcher Size:16
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+(*__errno_location()) = 0;
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 102:
+Spawn 1 instances, now Total 117
+Counter: 118
+Batcher Size:17
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+abort();
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 103:
+Spawn 1 instances, now Total 118
+Counter: 119
+Batcher Size:18
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+endpwent();
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 104:
+Spawn 1 instances, now Total 119
+Counter: 120
+Batcher Size:19
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+error(0, 0, dcgettext(((void *)0), "This system does not provide a way to find the birth time of a file.", 5));
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 105:
+Spawn 1 instances, now Total 120
+Counter: 121
+Batcher Size:20
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+endgrent();
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 106:
+Spawn 1 instances, now Total 121
+Counter: 122
+Batcher Size:21
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+(*__errno_location()) = 34;
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 107:
+Spawn 1 instances, now Total 122
+Counter: 123
+Batcher Size:22
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+(*(arg_ptr))++;
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 108:
+Spawn 1 instances, now Total 123
+Counter: 124
+Batcher Size:23
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+set_follow_state((SYMLINK_DEREF_ARGSONLY));
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 109:
+Spawn 1 instances, now Total 124
+a batched test job starts!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/srcMerged code building succ, going to invoke tester!
+BasicTester, Testing instance id 100:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 101:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 102:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 103:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 104:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 105:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 106:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 107:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 108:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 109:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+Counter: 125
+Batcher Size:14
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+set_follow_state(SYMLINK_ALWAYS_DEREF);
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 110:
+Spawn 1 instances, now Total 125
+Counter: 126
+Batcher Size:15
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+xalloc_die();
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 111:
+Spawn 1 instances, now Total 126
+Counter: 127
+Batcher Size:16
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+set_follow_state((SYMLINK_NEVER_DEREF));
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 112:
+Spawn 1 instances, now Total 127
+Counter: 128
+Batcher Size:17
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+puts(dcgettext(((void *)0), "operators (decreasing precedence; -and is implicit where no others are given):\n      ( EXPR )   ! EXPR   -not EXPR   EXPR1 -a EXPR2   EXPR1 -and EXPR2\n      EXPR1 -o EXPR2   EXPR1 -or EXPR2   EXPR1 , EXPR2\n", 5));
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 113:
+Spawn 1 instances, now Total 128
+Counter: 129
+Batcher Size:18
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+puts(dcgettext(((void *)0), "positional options (always true): -daystart -follow -regextype\n\nnormal options (always true, specified before other expressions):\n      -depth --help -maxdepth LEVELS -mindepth LEVELS -mount -noleaf\n      --version -xdev -ignore_readdir_race -noignore_readdir_race\n", 5));
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 114:
+Spawn 1 instances, now Total 129
+Counter: 130
+Batcher Size:19
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+puts(dcgettext(((void *)0), "tests (N can be +N or -N or N): -amin N -anewer FILE -atime N -cmin N\n      -cnewer FILE -ctime N -empty -false -fstype TYPE -gid N -group NAME\n      -ilname PATTERN -iname PATTERN -inum N -iwholename PATTERN -iregex PATTERN\n      -links N -lname PATTERN -mmin N -mtime N -name PATTERN -newer FILE", 5));
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 115:
+Spawn 1 instances, now Total 130
+Counter: 131
+Batcher Size:20
+Preprocess the following candidate with BasicTester:
+Priority 6452
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+set_follow_state((SYMLINK_ALWAYS_DEREF));
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 116:
+Spawn 1 instances, now Total 131
+Counter: 132
+Batcher Size:21
+Preprocess the following candidate with BasicTester:
+Priority 5604
+At location find/parser.c:385
+--Src File: find/parser.c
+Fragment 0:
+((0) ? (void)(0) : __assert_fail("0", "find/parser.c", 1470, __PRETTY_FUNCTION__));
+if (options.debug_options & DebugStat) {
+    options.xstat = debug_stat;
+} else {
+    switch (opt) {
+      case SYMLINK_ALWAYS_DEREF:
+        options.xstat = optionl_stat;
+        options.no_leaf_check = 1;
+        break;
+      case SYMLINK_NEVER_DEREF:
+        options.xstat = optionp_stat;
+        break;
+      case SYMLINK_DEREF_ARGSONLY:
+        options.xstat = optionh_stat;
+        options.no_leaf_check = 1;
+    }
+}
+
+
+BasicTester, a patch instance with id 117:
+Spawn 1 instances, now Total 132
+Counter: 133
+Batcher Size:22
+Preprocess the following candidate with BasicTester:
+Priority 5404
+At location find/parser.c:1337
+--Src File: find/parser.c
+Fragment 0:
+((0) ? (void)(0) : __assert_fail("0", "find/parser.c", 1470, __PRETTY_FUNCTION__));
+return do_parse_xmin(entry, argv, arg_ptr, XVAL_CTIME);
+
+
+BasicTester, a patch instance with id 118:
+Spawn 1 instances, now Total 133
+Counter: 134
+Batcher Size:23
+Preprocess the following candidate with BasicTester:
+Priority 4147
+At location find/parser.c:3196
+--Src File: find/parser.c
+Fragment 0:
+puts(dcgettext(((void *)0), "tests (N can be +N or -N or N): -amin N -anewer FILE -atime N -cmin N\n      -cnewer FILE -ctime N -empty -false -fstype TYPE -gid N -group NAME\n      -ilname PATTERN -iname PATTERN -inum N -iwholename PATTERN -iregex PATTERN\n      -links N -lname PATTERN -mmin N -mtime N -name PATTERN -newer FILE", 5));
+if (COMP_LT == tval.kind) {
+    origin += (86400 - 1);
+}
+
+
+BasicTester, a patch instance with id 119:
+Spawn 1 instances, now Total 134
+Counter: 135
+Batcher Size:24
+Preprocess the following candidate with BasicTester:
+Priority 4147
+At location find/parser.c:3196
+--Src File: find/parser.c
+Fragment 0:
+first_nonoption_arg = (errmsg);
+if (COMP_LT == tval.kind) {
+    origin += (86400 - 1);
+}
+
+
+BasicTester, a patch instance with id 120:
+Spawn 1 instances, now Total 135
+Counter: 136
+Batcher Size:25
+Preprocess the following candidate with BasicTester:
+Priority 4147
+At location find/parser.c:3196
+--Src File: find/parser.c
+Fragment 0:
+error(1, 0, dcgettext(((void *)0), "You may not use {} within the utility name for -execdir and -okdir, because this is a potential security problem.", 5));
+if (COMP_LT == tval.kind) {
+    origin += (86400 - 1);
+}
+
+
+BasicTester, a patch instance with id 121:
+Spawn 1 instances, now Total 136
+Counter: 137
+Batcher Size:26
+Preprocess the following candidate with BasicTester:
+Priority 4147
+At location find/parser.c:3196
+--Src File: find/parser.c
+Fragment 0:
+error(1, 0, dcgettext(((void *)0), "Invalid argument %s to -used", 5), (timearg));
+if (COMP_LT == tval.kind) {
+    origin += (86400 - 1);
+}
+
+
+BasicTester, a patch instance with id 122:
+Spawn 1 instances, now Total 137
+Counter: 138
+Batcher Size:27
+Preprocess the following candidate with BasicTester:
+Priority 4147
+At location find/parser.c:3196
+--Src File: find/parser.c
+Fragment 0:
+error(1, 0, "%s", (orig_timearg));
+if (COMP_LT == tval.kind) {
+    origin += (86400 - 1);
+}
+
+
+BasicTester, a patch instance with id 123:
+Spawn 1 instances, now Total 138
+Counter: 139
+Batcher Size:28
+Preprocess the following candidate with BasicTester:
+Priority 4147
+At location find/parser.c:3196
+--Src File: find/parser.c
+Fragment 0:
+error(1, (*__errno_location()), "Expected an integer: %s", quotearg_n_style(0, options.err_quoting_style, (errmsg)));
+if (COMP_LT == tval.kind) {
+    origin += (86400 - 1);
+}
+
+
+BasicTester, a patch instance with id 124:
+Spawn 1 instances, now Total 139
+Counter: 140
+Batcher Size:29
+Preprocess the following candidate with BasicTester:
+Priority 4147
+At location find/parser.c:3196
+--Src File: find/parser.c
+Fragment 0:
+error(0, 0, dcgettext(((void *)0), "warning: you have specified a mode pattern %s (which is equivalent to /000). The meaning of -perm /000 has now been changed to be consistent with -perm -000; that is, while it used to match no files, it now matches all files.", 5), (timearg));
+if (COMP_LT == tval.kind) {
+    origin += (86400 - 1);
+}
+
+
+BasicTester, a patch instance with id 125:
+Spawn 1 instances, now Total 140
+Counter: 141
+Batcher Size:30
+Preprocess the following candidate with BasicTester:
+Priority 4147
+At location find/parser.c:3196
+--Src File: find/parser.c
+Fragment 0:
+(*__errno_location()) = (86399);
+if (COMP_LT == tval.kind) {
+    origin += (86400 - 1);
+}
+
+
+BasicTester, a patch instance with id 126:
+Spawn 1 instances, now Total 141
+a batched test job starts!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/srcMerged code building succ, going to invoke tester!
+CondTester, Testing instance id 5:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+CondTester, Testing instance id 6:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+Passed Negative Cases wiht CondTestder!
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 1  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 2  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 3  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 4  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 5  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 6  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 7  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 9  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 10  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 11  > __res
+Passed Positive Cases
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 1  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 2  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 3  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 4  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 5  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 6  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 7  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 9  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 10  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 11  > __res
+Passed!
+BasicTester, Testing instance id 119:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 120:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 121:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src/find/find: You may not use {} within the utility name for -execdir and -okdir, because this is a potential security problem.
+BasicTester, Testing instance id 122:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src/find/find: Invalid argument 2 to -used
+BasicTester, Testing instance id 123:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src/find/find: -2
+BasicTester, Testing instance id 124:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src/find/find: Expected an integer: `arithmetic overflow while converting %s days to a number of seconds'
+BasicTester, Testing instance id 125:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src/find/find: warning: you have specified a mode pattern 2 (which is equivalent to /000). The meaning of -perm /000 has now been changed to be consistent with -perm -000; that is, while it used to match no files, it now matches all files.
+BasicTester, Testing instance id 126:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+CondTester, Postprocessing instance id 6:
+Trying a synthesis expr 1
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/srcRunning test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 1  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 2  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 3  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 4  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 5  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 6  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 7  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 9  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 10  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 11  > __res
+Passed Positive Cases
+Passed!
+Passed with updated best score 19999994.000000
+a batched test job starts!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/srcMerged code building succ, going to invoke tester!
+BasicTester, Testing instance id 57:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 58:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 59:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 117:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+find: find/parser.c:1470: set_follow_state: Assertion `0' failed.
+Aborted
+a batched test job starts!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/srcMerged code building succ, going to invoke tester!
+BasicTester, Testing instance id 110:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 111:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 112:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 113:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 114:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 115:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 116:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+BasicTester, Testing instance id 118:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+a batched test job starts!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/srcMerged code building failed! Going to build saperately!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/srcSingle building for Tester 0x24fd4c0 id 8 failed as well!
+a batched test job starts!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/srcMerged code building failed! Going to build saperately!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/srcSingle building for Tester 0x24fd4c0 id 2 failed as well!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/srcSingle building for Tester 0x24fd4c0 id 4 failed as well!
+a batched test job starts!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/srcMerged code building failed! Going to build saperately!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/srcSingle building for Tester 0x24fd4c0 id 13 failed as well!
+a batched test job starts!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/srcMerged code building failed! Going to build saperately!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/srcSingle building for Tester 0x24fd4c0 id 3 failed as well!
+a batched test job starts!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/srcMerged code building failed! Going to build saperately!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/srcSingle building for Tester 0x24fd4c0 id 11 failed as well!
+a batched test job starts!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/srcMerged code building failed! Going to build saperately!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/srcSingle building for Tester 0x24fd4c0 id 10 failed as well!
+a batched test job starts!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/srcMerged code building succ, going to invoke tester!
+CondTester, Testing instance id 12:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+a batched test job starts!
+Building:src at:
+/home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/srcMerged code building succ, going to invoke tester!
+CondTester, Testing instance id 7:
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+Running test command:
+/home/ubuntu/spr-fast/tools/findutils-test1.py /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/src /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l/tests /home/ubuntu/spr-fast/tests/corebench/find/findutils/findutils-case-daf7f100-dbcb10e9/tempworkdir-l 0  > __res
+Total cnt of passed cond schemas: 1
+Total cnt of cond schemas: 14
+Counter: 142
+Batcher Size:0
+The found score 19999994.000000 is greater than current score 4147.000000!
+Terminate current session!
+Generated a patch at candidate schema no 7
+Total cnt of passed cond schemas: 1
+Total cnt of cond schemas: 14
+Candidate count:0!!
+Found a fix! Store to: findutils-fix-daf7f100-dbcb10e9find_parser.c
+Repair process ends successfully!
+Total 4755 different repair candidate schema!!!!
+Total number of compiles: 40
+Total number of test eval: 174
